@@ -1,6 +1,85 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function Testimonials() {
+    const listTesti = [
+        {
+            img: "https://assets-global.website-files.com/62d901050b694cd462d2879c/62f3c7c9523cfa5823870041_testimonial-2.webp",
+            content:  <div className="div-block">
+            <div className="testimonial-name">
+              Partha Bhattacharya
+            </div>
+            <p className="testimonial-title">
+              Vidbazaar.com Founder
+            </p>
+            <div className="testimonial-text">
+              Vidbazaar.com Founder
+            </div>
+            <a href="#" className="_22-text is-white wrap-open">
+              I guess this will be the way forward for many ad
+              platforms. You guys can rightly claim as the
+              torchbearer for this. All the best!
+            </a>
+            <img
+              loading="lazy"
+              width="Auto"
+              alt=""
+              src="https://assets-global.website-files.com/62d901050b694cd462d2879c/64c67b1f62db2b29aea5f33d_500rew.svg"
+              className="testimonial-review"
+            />
+          </div>
+        },
+        {
+            img: "https://assets-global.website-files.com/62d901050b694cd462d2879c/62d9013383d7a466b1dd002f_testimonial-image.webp",
+            content: <div className="div-block">
+            <div className="testimonial-name">David N.</div>
+            <p className="testimonial-title">
+              VP Digital Marketing
+            </p>
+            <div className="testimonial-text">
+              VP Digital Marketing
+            </div>
+            <a href="#" className="_22-text is-white wrap-open">
+              …I love having both data and AI involved in making our
+              ads and overall testing process easier. I think our
+              designers will love it too since we will need even
+              less of their time.
+            </a>
+            <img
+              loading="lazy"
+              width="Auto"
+              alt=""
+              src="https://assets-global.website-files.com/62d901050b694cd462d2879c/64c67b1f62db2b29aea5f33d_500rew.svg"
+              className="testimonial-review"
+            />
+          </div>
+        },
+        {
+            img: "https://assets-global.website-files.com/62d901050b694cd462d2879c/62f3c7de5ec74f0b7342337c_testimonial-3.webp",
+            content: <div className="div-block">
+            <div className="testimonial-name">Matthew W.</div>
+            <p className="testimonial-title">
+              Founder &amp; CEO at Rapid Alpha
+            </p>
+            <div className="testimonial-text">
+              Founder &amp; CEO at Rapid Alpha
+            </div>
+            <a href="#" className="_22-text is-white wrap-open">
+              …I am usually not impressed with .ai-based products,
+              but Adcreative.ai has been a pleasant and already
+              financially rewarding experience.
+            </a>
+            <img
+              loading="lazy"
+              width="Auto"
+              alt=""
+              src="https://assets-global.website-files.com/62d901050b694cd462d2879c/64c67b1f62db2b29aea5f33d_500rew.svg"
+              className="testimonial-review"
+            />
+          </div>
+        },
+       
+    ]
+    const [number, setNumber] = useState(2)
   return (
     <div className="section is-testimonials">
       <div className="container testimonials">
@@ -30,7 +109,7 @@ export default function Testimonials() {
                 className="swiper-slide is-photos w-dyn-item swiper-slide-duplicate swiper-slide-prev"
                 data-swiper-slide-index={5}
                 style={{
-                  width: 921,
+                //   width: 921,
                   transitionDuration: "0ms",
                   zIndex: 7,
                   transform:
@@ -44,189 +123,7 @@ export default function Testimonials() {
                       <img
                         alt=""
                         loading="lazy"
-                        src="https://assets-global.website-files.com/62d901050b694cd462d2879c/62f3c8092e7c8d7b01915dce_testimonial-6.webp"
-                        className="image"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                role="group"
-                className="swiper-slide is-photos w-dyn-item swiper-slide-visible swiper-slide-active"
-                data-swiper-slide-index={0}
-                style={{
-                  width: 921,
-                  transitionDuration: "0ms",
-                  zIndex: 8,
-                  transform:
-                    "translate3d(-921px, 0px, 0px) rotateX(0deg) rotateY(0deg)",
-                }}
-                aria-label="1 / 6"
-              >
-                <div className="testimonial-wrapper">
-                  <div className="testimonial-insider">
-                    <div className="testimonial-image">
-                      <img
-                        alt=""
-                        loading="lazy"
-                        src="https://assets-global.website-files.com/62d901050b694cd462d2879c/62f3c7c9523cfa5823870041_testimonial-2.webp"
-                        className="image"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                role="group"
-                className="swiper-slide is-photos w-dyn-item swiper-slide-next"
-                data-swiper-slide-index={1}
-                style={{
-                  width: 921,
-                  transitionDuration: "0ms",
-                  zIndex: 7,
-                  transform:
-                    "translate3d(-1842px, 0px, 0px) rotateX(0deg) rotateY(180deg)",
-                }}
-                aria-label="2 / 6"
-              >
-                <div className="testimonial-wrapper">
-                  <div className="testimonial-insider">
-                    <div className="testimonial-image">
-                      <img
-                        alt=""
-                        loading="lazy"
-                        src="https://assets-global.website-files.com/62d901050b694cd462d2879c/62d9013383d7a466b1dd002f_testimonial-image.webp"
-                        className="image"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                role="group"
-                className="swiper-slide is-photos w-dyn-item"
-                data-swiper-slide-index={2}
-                style={{
-                  width: 921,
-                  transitionDuration: "0ms",
-                  zIndex: 7,
-                  transform:
-                    "translate3d(-2763px, 0px, 0px) rotateX(0deg) rotateY(180deg)",
-                }}
-                aria-label="3 / 6"
-              >
-                <div className="testimonial-wrapper">
-                  <div className="testimonial-insider">
-                    <div className="testimonial-image">
-                      <img
-                        alt=""
-                        loading="lazy"
-                        src="https://assets-global.website-files.com/62d901050b694cd462d2879c/62f3c7de5ec74f0b7342337c_testimonial-3.webp"
-                        className="image"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                role="group"
-                className="swiper-slide is-photos w-dyn-item"
-                data-swiper-slide-index={3}
-                style={{
-                  width: 921,
-                  transitionDuration: "0ms",
-                  zIndex: 7,
-                  transform:
-                    "translate3d(-3684px, 0px, 0px) rotateX(0deg) rotateY(180deg)",
-                }}
-                aria-label="4 / 6"
-              >
-                <div className="testimonial-wrapper">
-                  <div className="testimonial-insider">
-                    <div className="testimonial-image">
-                      <img
-                        alt=""
-                        loading="lazy"
-                        src="https://assets-global.website-files.com/62d901050b694cd462d2879c/62f3c7f606d9c3f86b05bc84_testimonial-4.webp"
-                        className="image"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                role="group"
-                className="swiper-slide is-photos w-dyn-item"
-                data-swiper-slide-index={4}
-                style={{
-                  width: 921,
-                  transitionDuration: "0ms",
-                  zIndex: 7,
-                  transform:
-                    "translate3d(-4605px, 0px, 0px) rotateX(0deg) rotateY(180deg)",
-                }}
-                aria-label="5 / 6"
-              >
-                <div className="testimonial-wrapper">
-                  <div className="testimonial-insider">
-                    <div className="testimonial-image">
-                      <img
-                        alt=""
-                        loading="lazy"
-                        src="https://assets-global.website-files.com/62d901050b694cd462d2879c/62f3c802b9b831b65d2a3989_testimonial-5.webp"
-                        className="image"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                role="group"
-                className="swiper-slide is-photos w-dyn-item swiper-slide-duplicate-prev"
-                data-swiper-slide-index={5}
-                style={{
-                  width: 921,
-                  transitionDuration: "0ms",
-                  zIndex: 7,
-                  transform:
-                    "translate3d(-5526px, 0px, 0px) rotateX(0deg) rotateY(180deg)",
-                }}
-                aria-label="6 / 6"
-              >
-                <div className="testimonial-wrapper">
-                  <div className="testimonial-insider">
-                    <div className="testimonial-image">
-                      <img
-                        alt=""
-                        loading="lazy"
-                        src="https://assets-global.website-files.com/62d901050b694cd462d2879c/62f3c8092e7c8d7b01915dce_testimonial-6.webp"
-                        className="image"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                role="group"
-                className="swiper-slide is-photos w-dyn-item swiper-slide-duplicate swiper-slide-duplicate-active"
-                data-swiper-slide-index={0}
-                aria-label="1 / 6"
-                style={{
-                  width: 921,
-                  transitionDuration: "0ms",
-                  zIndex: 7,
-                  transform:
-                    "translate3d(-6447px, 0px, 0px) rotateX(0deg) rotateY(180deg)",
-                }}
-              >
-                <div className="testimonial-wrapper">
-                  <div className="testimonial-insider">
-                    <div className="testimonial-image">
-                      <img
-                        alt=""
-                        loading="lazy"
-                        src="https://assets-global.website-files.com/62d901050b694cd462d2879c/62f3c7c9523cfa5823870041_testimonial-2.webp"
+                        src={listTesti[number]?.img}
                         className="image"
                       />
                     </div>
@@ -241,12 +138,24 @@ export default function Testimonials() {
             />
           </div>
           <a
-            href="#"
+            // href="#"
             className="arrow is-left w-inline-block"
             tabIndex={0}
             role="button"
             aria-label="Previous slide"
             aria-controls="swiper-wrapper-3f7e97a10918c71b5"
+            onClick={()=>{
+                setNumber(pre=>{
+                    console.log("pre", pre)
+                    if (pre <= 0) {
+                        return listTesti.length -1
+                    } else if (pre > listTesti.length -1) {
+                        return 0
+                    } else {
+                        return pre - 1
+                    }
+                })
+            }}
           >
             <img
               src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/62d90af20b694c03b0d2ecfa_arrow-testimonial.svg"
@@ -255,12 +164,22 @@ export default function Testimonials() {
             />
           </a>
           <a
-            href="#"
+            // href="#"
             className="arrow is-right w-inline-block"
             tabIndex={0}
             role="button"
             aria-label="Next slide"
             aria-controls="swiper-wrapper-3f7e97a10918c71b5"
+            onClick={()=>{
+                setNumber(pre=>{
+                    console.log("pre", pre)
+                    if (pre >= listTesti.length -1) {
+                        return 0
+                    } else {
+                        return pre +1
+                    }
+                })
+            }}
           >
             <img
               src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/62d90af20b694c03b0d2ecfa_arrow-testimonial.svg"
@@ -282,256 +201,14 @@ export default function Testimonials() {
                   className="swiper-slide is-content w-dyn-item swiper-slide-duplicate swiper-slide-prev"
                   data-swiper-slide-index={5}
                   style={{
-                    width: 921,
+                    // width: 921,
                     transitionDuration: "0ms",
-                    opacity: 0,
+                    opacity: 1,
                     transform: "translate3d(0px, 0px, 0px)",
                   }}
                   aria-label="6 / 6"
                 >
-                  <div className="div-block">
-                    <div className="testimonial-name">Partha Bhattacharya</div>
-                    <p className="testimonial-title">Vidbazaar.com Founder</p>
-                    <div className="testimonial-text">
-                      Vidbazaar.com Founder
-                    </div>
-                    <a href="#" className="_22-text is-white wrap-open">
-                      I guess this will be the way forward for many ad
-                      platforms. You guys can rightly claim as the torchbearer
-                      for this. All the best!
-                    </a>
-                    <img
-                      loading="lazy"
-                      width="Auto"
-                      alt=""
-                      src="https://assets-global.website-files.com/62d901050b694cd462d2879c/64c67b1f62db2b29aea5f33d_500rew.svg"
-                      className="testimonial-review"
-                    />
-                  </div>
-                </div>
-                <div
-                  role="group"
-                  className="swiper-slide is-content w-dyn-item swiper-slide-visible swiper-slide-active"
-                  data-swiper-slide-index={0}
-                  style={{
-                    width: 921,
-                    transitionDuration: "0ms",
-                    opacity: 1,
-                    transform: "translate3d(-921px, 0px, 0px)",
-                  }}
-                  aria-label="1 / 6"
-                >
-                  <div className="div-block">
-                    <div className="testimonial-name">David N.</div>
-                    <p className="testimonial-title">VP Digital Marketing</p>
-                    <div className="testimonial-text">VP Digital Marketing</div>
-                    <a href="#" className="_22-text is-white wrap-open">
-                      …I love having both data and AI involved in making our ads
-                      and overall testing process easier. I think our designers
-                      will love it too since we will need even less of their
-                      time.
-                    </a>
-                    <img
-                      loading="lazy"
-                      width="Auto"
-                      alt=""
-                      src="https://assets-global.website-files.com/62d901050b694cd462d2879c/64c67b1f62db2b29aea5f33d_500rew.svg"
-                      className="testimonial-review"
-                    />
-                  </div>
-                </div>
-                <div
-                  role="group"
-                  className="swiper-slide is-content w-dyn-item swiper-slide-next"
-                  data-swiper-slide-index={1}
-                  style={{
-                    width: 921,
-                    transitionDuration: "0ms",
-                    opacity: 0,
-                    transform: "translate3d(-1842px, 0px, 0px)",
-                  }}
-                  aria-label="2 / 6"
-                >
-                  <div className="div-block">
-                    <div className="testimonial-name">Matthew W.</div>
-                    <p className="testimonial-title">
-                      Founder &amp; CEO at Rapid Alpha
-                    </p>
-                    <div className="testimonial-text">
-                      Founder &amp; CEO at Rapid Alpha
-                    </div>
-                    <a href="#" className="_22-text is-white wrap-open">
-                      …I am usually not impressed with .ai-based products, but
-                      Adcreative.ai has been a pleasant and already financially
-                      rewarding experience.
-                    </a>
-                    <img
-                      loading="lazy"
-                      width="Auto"
-                      alt=""
-                      src="https://assets-global.website-files.com/62d901050b694cd462d2879c/64c67b1f62db2b29aea5f33d_500rew.svg"
-                      className="testimonial-review"
-                    />
-                  </div>
-                </div>
-                <div
-                  role="group"
-                  className="swiper-slide is-content w-dyn-item"
-                  data-swiper-slide-index={2}
-                  style={{
-                    width: 921,
-                    transitionDuration: "0ms",
-                    opacity: 0,
-                    transform: "translate3d(-2763px, 0px, 0px)",
-                  }}
-                  aria-label="3 / 6"
-                >
-                  <div className="div-block">
-                    <div className="testimonial-name">Nicholas F.</div>
-                    <p className="testimonial-title">Director</p>
-                    <div className="testimonial-text">Director</div>
-                    <a href="#" className="_22-text is-white wrap-open">
-                      One of the biggest challenges with ad creative is having
-                      to make both dozens of design styles to show the client
-                      and then to over a dozen aspect variations for the varying
-                      platforms…Adcreative removes this challenge in literally a
-                      couple of minutes.
-                    </a>
-                    <img
-                      loading="lazy"
-                      width="Auto"
-                      alt=""
-                      src="https://assets-global.website-files.com/62d901050b694cd462d2879c/64c67b1f62db2b29aea5f33d_500rew.svg"
-                      className="testimonial-review"
-                    />
-                  </div>
-                </div>
-                <div
-                  role="group"
-                  className="swiper-slide is-content w-dyn-item"
-                  data-swiper-slide-index={3}
-                  style={{
-                    width: 921,
-                    transitionDuration: "0ms",
-                    opacity: 0,
-                    transform: "translate3d(-3684px, 0px, 0px)",
-                  }}
-                  aria-label="4 / 6"
-                >
-                  <div className="div-block">
-                    <div className="testimonial-name">Torsten Koch</div>
-                    <p className="testimonial-title">Director</p>
-                    <div className="testimonial-text">Director</div>
-                    <a href="#" className="_22-text is-white wrap-open">
-                      I was looking for months now to find a solution for a
-                      helping hand with my ads :-) and here we go! I love your
-                      tool extremely and it is saving me lots of time in my
-                      daily business and it’s fun to work with this tool. Happy
-                      to be on board!
-                    </a>
-                    <img
-                      loading="lazy"
-                      width="Auto"
-                      alt=""
-                      src="https://assets-global.website-files.com/62d901050b694cd462d2879c/64c67b1f62db2b29aea5f33d_500rew.svg"
-                      className="testimonial-review"
-                    />
-                  </div>
-                </div>
-                <div
-                  role="group"
-                  className="swiper-slide is-content w-dyn-item"
-                  data-swiper-slide-index={4}
-                  style={{
-                    width: 921,
-                    transitionDuration: "0ms",
-                    opacity: 0,
-                    transform: "translate3d(-4605px, 0px, 0px)",
-                  }}
-                  aria-label="5 / 6"
-                >
-                  <div className="div-block">
-                    <div className="testimonial-name">Brian Gabriel</div>
-                    <p className="testimonial-title">PPC marketing</p>
-                    <div className="testimonial-text">PPC marketing</div>
-                    <a href="#" className="_22-text is-white wrap-open">
-                      One of the biggest challenges with ad creative is having
-                      to make both dozens of design styles to show the client
-                      and then to over a dozen aspect variations for the varying
-                      platforms…Adcreative removes this challenge in literally a
-                      couple of minutes.
-                    </a>
-                    <img
-                      loading="lazy"
-                      width="Auto"
-                      alt=""
-                      src="https://assets-global.website-files.com/62d901050b694cd462d2879c/64c67b1f62db2b29aea5f33d_500rew.svg"
-                      className="testimonial-review"
-                    />
-                  </div>
-                </div>
-                <div
-                  role="group"
-                  className="swiper-slide is-content w-dyn-item swiper-slide-duplicate-prev"
-                  data-swiper-slide-index={5}
-                  style={{
-                    width: 921,
-                    transitionDuration: "0ms",
-                    opacity: 0,
-                    transform: "translate3d(-5526px, 0px, 0px)",
-                  }}
-                  aria-label="6 / 6"
-                >
-                  <div className="div-block">
-                    <div className="testimonial-name">Partha Bhattacharya</div>
-                    <p className="testimonial-title">Vidbazaar.com Founder</p>
-                    <div className="testimonial-text">
-                      Vidbazaar.com Founder
-                    </div>
-                    <a href="#" className="_22-text is-white wrap-open">
-                      I guess this will be the way forward for many ad
-                      platforms. You guys can rightly claim as the torchbearer
-                      for this. All the best!
-                    </a>
-                    <img
-                      loading="lazy"
-                      width="Auto"
-                      alt=""
-                      src="https://assets-global.website-files.com/62d901050b694cd462d2879c/64c67b1f62db2b29aea5f33d_500rew.svg"
-                      className="testimonial-review"
-                    />
-                  </div>
-                </div>
-                <div
-                  role="group"
-                  className="swiper-slide is-content w-dyn-item swiper-slide-duplicate swiper-slide-duplicate-active"
-                  data-swiper-slide-index={0}
-                  aria-label="1 / 6"
-                  style={{
-                    width: 921,
-                    transitionDuration: "0ms",
-                    opacity: 0,
-                    transform: "translate3d(-6447px, 0px, 0px)",
-                  }}
-                >
-                  <div className="div-block">
-                    <div className="testimonial-name">David N.</div>
-                    <p className="testimonial-title">VP Digital Marketing</p>
-                    <div className="testimonial-text">VP Digital Marketing</div>
-                    <a href="#" className="_22-text is-white wrap-open">
-                      …I love having both data and AI involved in making our ads
-                      and overall testing process easier. I think our designers
-                      will love it too since we will need even less of their
-                      time.
-                    </a>
-                    <img
-                      loading="lazy"
-                      width="Auto"
-                      alt=""
-                      src="https://assets-global.website-files.com/62d901050b694cd462d2879c/64c67b1f62db2b29aea5f33d_500rew.svg"
-                      className="testimonial-review"
-                    />
-                  </div>
+                  {listTesti[number]?.content}
                 </div>
               </div>
               <span

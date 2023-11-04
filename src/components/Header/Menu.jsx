@@ -78,11 +78,8 @@ export default function Menu() {
             </svg>
           </div>
         </div>
-        <div className="nav-link-text">Features</div>
-        <div
-          className="icon w-icon-dropdown-toggle"
-          aria-hidden="true"
-        />
+        <div className="nav-link-text">Features </div>
+        <div style={{marginLeft: 4,  transform: "rotate(90deg)"}}>{`>`}</div>
       </div>
       <nav
         className={`dropdown-list w-dropdown-list ${isFeature? "w--open" : ""}`}
@@ -198,10 +195,7 @@ export default function Menu() {
           </div>
         </div>
         <div className="nav-link-text">Use Cases</div>
-        <div
-          className="icon w-icon-dropdown-toggle"
-          aria-hidden="true"
-        />
+        <div style={{marginLeft: 4,  transform: "rotate(90deg)"}}>{`>`}</div>
       </div>
       <nav
         className={`dropdown-list w-dropdown-list ${isUsecase? "w--open" : ""}`}

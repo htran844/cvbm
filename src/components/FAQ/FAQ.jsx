@@ -92,6 +92,14 @@ export default function FAQ() {
     },
   ];
   const [num, setnum] = useState(1);
+  const ClickFAQ = (number)=>{
+    console.log(number)
+    if(number == num){
+        setnum(0)
+    } else{
+        setnum(number)
+    }
+  }
 
   return (
     <div id="FAQ" className="section overflow-hidden">
@@ -131,23 +139,26 @@ export default function FAQ() {
                       style={ item.id == num
                         ? {
                             transform:
-                              "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(180deg) skew(0deg, 0deg)",
+                              "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
                             transformStyle: "preserve-3d",
                           }
                         : {
                             transform:
-                              "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
+                              "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(180deg) skew(0deg, 0deg)",
                             transformStyle: "preserve-3d",
                           }}
                       onClick={() => {
-                        console.log("setnum", index);
-                        setnum(index + 1);
+                        console.log("setnum", num);
+                        ClickFAQ(index + 1);
                       }}
                     >
-                      <div
-                        className="faq-plus-l"
-                        style={{}}
-                      />
+                        {
+                            item.id == num ? <div></div> : <div
+                            className="faq-plus-l"
+                            style={{}}
+                          />
+                        }
+                      
                       <div className="faq-plus" />
                     </div>
                   </div>

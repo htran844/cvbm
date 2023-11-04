@@ -1,9 +1,643 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export default function Hero() {
   const [isShowMenu, setShowMenu] = useState(false);
   const [isShowMenuFeature, setShowMenuFeature] = useState(false);
   const [isShowMenuUsecase, setShowMenuUsecase] = useState(false);
+  const [number, setNumber] = useState(0);
+  const listHeroItem = [
+    {
+        id:1,
+        content: <div
+        className="hero_item is--1 active"
+        style={{ opacity: 1 }}
+      >
+        <div className="hero-visual-top">
+          <div
+            id="w-node-aec86962-c603-e087-3187-4a1b1b069dc6-f148ae1e"
+            className="hero-top-card flip"
+            style={{ opacity: "0.9469" }}
+          >
+            <div className="card-feature">
+              <div className="card-upper-text">Brand</div>
+            </div>
+            <img
+              src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/62d7dc1652a03e5deb010378_tesla-logo.svg"
+              loading="lazy"
+              alt="tesla-logo"
+              width="51.5"
+              className="tesla-logo"
+            />
+          </div>
+          <div
+            id="w-node-cf829446-96b4-ebe0-8471-7849fe6de7a1-f148ae1e"
+            className="hero-top-card flip"
+            style={{ opacity: "0.9469" }}
+          >
+            <div className="card-feature">
+              <div className="card-upper-text">Size</div>
+            </div>
+            <div className="card-information">
+              Post Size
+              <br />
+              <span className="text-span">(1080x1080)</span>
+            </div>
+          </div>
+          <div
+            id="w-node-cf2e8de1-02e8-8fbc-35e2-cd7a53367f5b-f148ae1e"
+            className="hero-top-card flip"
+            style={{ opacity: "0.9469" }}
+          >
+            <div className="card-feature">
+              <div className="card-upper-text">Text</div>
+            </div>
+            <div className="card-information is-2">
+              <span className="text-span-7">
+                Tesla Model S Plaid
+              </span>
+              <br />
+              ORDER NOW
+              <span className="text-span" />
+            </div>
+          </div>
+          <div
+            id="w-node-_2dd5d586-50be-6e3d-3729-080814c6c9b4-f148ae1e"
+            className="hero-top-card flip"
+            style={{ opacity: "0.9469" }}
+          >
+            <div className="card-feature">
+              <div className="card-upper-text">Image</div>
+            </div>
+            <img
+              src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c645e7e4ad5109a7e5a4a1_1154171.webp"
+              loading="lazy"
+              alt=""
+              className="brand-image"
+            />
+          </div>
+          <div
+            id="w-node-fb8b40c8-6ab2-1b2e-ecbb-18f9dd80034f-f148ae1e"
+            className="hero-arrow w-embed"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="100%"
+              height="100%"
+              viewBox="0 0 13 52.063"
+            >
+              <g
+                id="Group_13230"
+                data-name="Group 13230"
+                transform="translate(-954 -297.845)"
+              >
+                <path
+                  id="Path_25264"
+                  data-name="Path 25264"
+                  d="M144.012,12H94.95"
+                  transform="translate(948.5 443.357) rotate(-90)"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeMiterlimit={10}
+                  strokeWidth={3}
+                  strokeDasharray="1 10"
+                />
+                <path
+                  id="Polygon_51"
+                  data-name="Polygon 51"
+                  d="M5.662,1.29a1,1,0,0,1,1.677,0L12,8.455A1,1,0,0,1,11.157,10H1.843A1,1,0,0,1,1,8.455Z"
+                  transform="translate(967 327) rotate(180)"
+                  fill="currentColor"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div
+          className="hero-item-rotate"
+          style={{
+            willChange: "transform",
+            transform:
+              "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(7.3028deg) rotateY(15.9968deg) rotateZ(0deg) skew(0deg, 0deg)",
+            transformStyle: "preserve-3d",
+          }}
+        >
+          <div className="hero-images" />
+          <img
+            src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c51dfd534786a2758e25c8_Group%2021065.webp"
+            loading="lazy"
+            alt=""
+            className="image-small flip"
+            style={{ opacity: "0.9469" }}
+          />
+          <img
+            src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c51dfe96fa168ec5a8fe3f_Group%2021307.webp"
+            loading="lazy"
+            alt=""
+            className="image-medium flip"
+            style={{ opacity: "0.9469" }}
+          />
+          <img
+            src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c51dff8bcb07f304ca404e_Group%2021308.webp"
+            loading="lazy"
+            alt=""
+            height=""
+            sizes="(max-width: 991px) 100vw, (max-width: 1919px) 16vw, 300px"
+            srcSet="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c51dff8bcb07f304ca404e_Group%2021308-p-500.webp 500w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c51dff8bcb07f304ca404e_Group%2021308.webp 600w"
+            className="image-big flip"
+            style={{ opacity: "0.9469" }}
+          />
+          <img
+            src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c51dfe13235e3b217e1b12_Group%2021309.webp"
+            loading="lazy"
+            alt=""
+            className="image-medium is-right flip"
+            style={{ opacity: "0.9469" }}
+          />
+          <img
+            src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c51dfeba83e11a926d16f0_Group%2021310.webp"
+            loading="lazy"
+            alt=""
+            className="image-small is-right flip"
+            style={{ opacity: "0.9469" }}
+          />
+        </div>
+        <img
+          src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c78fb0c49f41a64f34d79a_hero-tesla.webp"
+          loading="lazy"
+          height={320}
+          sizes="(max-width: 479px) 100vw, (max-width: 767px) 499.9999694824219px, (max-width: 991px) 620.95166015625px, 100vw"
+          alt=""
+          srcSet="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c78fb0c49f41a64f34d79a_hero-tesla-p-500.webp 500w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c78fb0c49f41a64f34d79a_hero-tesla-p-800.webp 800w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c78fb0c49f41a64f34d79a_hero-tesla-p-1080.webp 1080w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c78fb0c49f41a64f34d79a_hero-tesla-p-1600.webp 1600w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c78fb0c49f41a64f34d79a_hero-tesla-p-2000.webp 2000w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c78fb0c49f41a64f34d79a_hero-tesla-p-2600.webp 2600w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c78fb0c49f41a64f34d79a_hero-tesla.webp 3619w"
+          className="mobile-tesla"
+        />
+      </div>
+    },
+    {
+        id:2,
+        content:  <div className="hero_item" style={{ opacity: 1 }}>
+        <div className="hero-visual-top">
+          <div
+            id="w-node-c77e899e-c707-4595-841f-a516ce2bef50-f148ae1e"
+            className="hero-top-card flip"
+            style={{ opacity: "0.9469" }}
+          >
+            <div className="card-feature">
+              <div>Brand</div>
+            </div>
+            <img
+              src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/633960aead6a6dfa2a03c1f7_ua-logo.svg"
+              loading="lazy"
+              alt="UA Logo"
+              className="tesla-logo"
+            />
+          </div>
+          <div
+            id="w-node-c77e899e-c707-4595-841f-a516ce2bef55-f148ae1e"
+            className="hero-top-card flip"
+            style={{ opacity: "0.9469" }}
+          >
+            <div className="card-feature">
+              <div>Size</div>
+            </div>
+            <div className="card-information">
+              Vertical Size
+              <br />‍
+              <span className="text-span">(1080x1350)</span>
+            </div>
+          </div>
+          <div
+            id="w-node-c77e899e-c707-4595-841f-a516ce2bef5e-f148ae1e"
+            className="hero-top-card flip"
+            style={{ opacity: "0.9469" }}
+          >
+            <div className="card-feature">
+              <div>Text</div>
+            </div>
+            <div className="card-information is-2">
+              Reach your ideal custom..
+              <br />
+            </div>
+          </div>
+          <div
+            id="w-node-c77e899e-c707-4595-841f-a516ce2bef68-f148ae1e"
+            className="hero-top-card flip"
+            style={{ opacity: "0.9469" }}
+          >
+            <div className="card-feature">
+              <div>Image</div>
+            </div>
+            <img
+              src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c645a7faaf8c07c784cec1_iScreen%20Shoter%20-%2020230709190222343.webp"
+              loading="lazy"
+              alt=""
+              className="brand-image"
+            />
+          </div>
+          <div
+            id="w-node-c77e899e-c707-4595-841f-a516ce2bef6d-f148ae1e"
+            className="hero-arrow w-embed"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="100%"
+              height="100%"
+              viewBox="0 0 13 52.063"
+            >
+              <g
+                id="Group_13230"
+                data-name="Group 13230"
+                transform="translate(-954 -297.845)"
+              >
+                <path
+                  id="Path_25264"
+                  data-name="Path 25264"
+                  d="M144.012,12H94.95"
+                  transform="translate(948.5 443.357) rotate(-90)"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeMiterlimit={10}
+                  strokeWidth={3}
+                  strokeDasharray="1 10"
+                />
+                <path
+                  id="Polygon_51"
+                  data-name="Polygon 51"
+                  d="M5.662,1.29a1,1,0,0,1,1.677,0L12,8.455A1,1,0,0,1,11.157,10H1.843A1,1,0,0,1,1,8.455Z"
+                  transform="translate(967 327) rotate(180)"
+                  fill="currentColor"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div
+          className="hero-item-rotate"
+          style={{
+            willChange: "transform",
+            transform:
+              "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(7.3028deg) rotateY(15.9968deg) rotateZ(0deg) skew(0deg, 0deg)",
+            transformStyle: "preserve-3d",
+          }}
+        >
+          <div className="hero-images" />
+          <img
+            src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a6239c7da1bfd605e_Group%2021323.webp"
+            loading="lazy"
+            sizes="(max-width: 991px) 100vw, (max-width: 1919px) 10vw, 192.9971466064453px"
+            srcSet="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a6239c7da1bfd605e_Group%2021323-p-500.webp 500w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a6239c7da1bfd605e_Group%2021323.webp 580w"
+            alt=""
+            className="image-small flip"
+            style={{ opacity: "0.9469" }}
+          />
+          <img
+            src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490ab5d3e5b85de62117_Group%2021324.webp"
+            loading="lazy"
+            sizes="(max-width: 991px) 100vw, (max-width: 1919px) 12vw, 229.99998474121094px"
+            srcSet="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490ab5d3e5b85de62117_Group%2021324-p-500.webp 500w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490ab5d3e5b85de62117_Group%2021324.webp 694w"
+            alt=""
+            className="image-medium flip"
+            style={{ opacity: "0.9469" }}
+          />
+          <img
+            src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a6239c7da1bfd605e_Group%2021323.webp"
+            loading="lazy"
+            sizes="(max-width: 991px) 100vw, (max-width: 1919px) 16vw, 300px"
+            srcSet="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a6239c7da1bfd605e_Group%2021323-p-500.webp 500w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a6239c7da1bfd605e_Group%2021323.webp 580w"
+            alt=""
+            className="image-big flip"
+            style={{ opacity: "0.9469" }}
+          />
+          <img
+            src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a8034e6797135ad49_Group%2021325.webp"
+            loading="lazy"
+            sizes="(max-width: 991px) 100vw, (max-width: 1919px) 12vw, 229.99998474121094px"
+            srcSet="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a8034e6797135ad49_Group%2021325-p-500.webp 500w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a8034e6797135ad49_Group%2021325-p-800.webp 800w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a8034e6797135ad49_Group%2021325.webp 901w"
+            alt=""
+            className="image-medium is-right flip"
+            style={{ opacity: "0.9469" }}
+          />
+          <img
+            src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a62db2b29ae79f470_Group%2013100.webp"
+            loading="lazy"
+            srcSet="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a62db2b29ae79f470_Group%2013100-p-500.webp 500w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a62db2b29ae79f470_Group%2013100.webp 577w"
+            sizes="(max-width: 991px) 100vw, (max-width: 1919px) 10vw, 192.9971466064453px"
+            alt=""
+            className="image-small is-right flip"
+            style={{ opacity: "0.9469" }}
+          />
+        </div>
+      </div>
+    },
+    {
+        id:3,
+        content: <div className="hero_item" style={{ opacity: 1 }}>
+        <div className="hero-visual-top">
+          <div
+            id="w-node-b558ac4a-b15d-75eb-eeb0-55f8eeddf16b-f148ae1e"
+            className="hero-top-card flip"
+            style={{ opacity: "0.9469" }}
+          >
+            <div className="card-feature">
+              <div>Brand</div>
+            </div>
+            <img
+              src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/62f55fa974adcf7d879ff234_wework-logo.svg"
+              loading="lazy"
+              alt="wework-logo"
+              className="tesla-logo"
+            />
+          </div>
+          <div
+            id="w-node-b558ac4a-b15d-75eb-eeb0-55f8eeddf170-f148ae1e"
+            className="hero-top-card flip"
+            style={{ opacity: "0.9469" }}
+          >
+            <div className="card-feature">
+              <div>Size</div>
+            </div>
+            <div className="card-information">
+              Landscape
+              <br />
+              (1200x628)
+            </div>
+          </div>
+          <div
+            id="w-node-b558ac4a-b15d-75eb-eeb0-55f8eeddf17a-f148ae1e"
+            className="hero-top-card flip"
+            style={{ opacity: "0.9469" }}
+          >
+            <div className="card-feature">
+              <div>Text</div>
+            </div>
+            <div className="card-information is-2">
+              Much more than an offic..
+              <br />
+            </div>
+          </div>
+          <div
+            id="w-node-b558ac4a-b15d-75eb-eeb0-55f8eeddf181-f148ae1e"
+            className="hero-top-card flip"
+            style={{ opacity: "0.9469" }}
+          >
+            <div className="card-feature">
+              <div>Image</div>
+            </div>
+            <img
+              src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c645a7ca5f6f1712e972b7_add.webp"
+              loading="lazy"
+              alt=""
+              className="brand-image"
+            />
+          </div>
+          <div
+            id="w-node-b558ac4a-b15d-75eb-eeb0-55f8eeddf186-f148ae1e"
+            className="hero-arrow w-embed"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="100%"
+              height="100%"
+              viewBox="0 0 13 52.063"
+            >
+              <g
+                id="Group_13230"
+                data-name="Group 13230"
+                transform="translate(-954 -297.845)"
+              >
+                <path
+                  id="Path_25264"
+                  data-name="Path 25264"
+                  d="M144.012,12H94.95"
+                  transform="translate(948.5 443.357) rotate(-90)"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeMiterlimit={10}
+                  strokeWidth={3}
+                  strokeDasharray="1 10"
+                />
+                <path
+                  id="Polygon_51"
+                  data-name="Polygon 51"
+                  d="M5.662,1.29a1,1,0,0,1,1.677,0L12,8.455A1,1,0,0,1,11.157,10H1.843A1,1,0,0,1,1,8.455Z"
+                  transform="translate(967 327) rotate(180)"
+                  fill="currentColor"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div
+          className="hero-item-rotate"
+          style={{
+            willChange: "transform",
+            transform:
+              "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(7.3028deg) rotateY(15.9968deg) rotateZ(0deg) skew(0deg, 0deg)",
+            transformStyle: "preserve-3d",
+          }}
+        >
+          <div className="hero-images" />
+          <img
+            src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a2cff33c4e44db0e4_Group%2021326.webp"
+            loading="lazy"
+            sizes="(max-width: 991px) 100vw, (max-width: 1919px) 19vw, 370.9942932128906px"
+            srcSet="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a2cff33c4e44db0e4_Group%2021326-p-500.webp 500w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a2cff33c4e44db0e4_Group%2021326-p-800.webp 800w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a2cff33c4e44db0e4_Group%2021326-p-1080.webp 1080w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a2cff33c4e44db0e4_Group%2021326.webp 1114w"
+            alt=""
+            className="image-medium flip is-we-work"
+            style={{ opacity: "0.9469" }}
+          />
+          <img
+            src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a4ec02a6c5a2f8bf3_Group%2021327.webp"
+            loading="lazy"
+            sizes="(max-width: 991px) 100vw, (max-width: 1919px) 23vw, 448.9985656738281px"
+            srcSet="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a4ec02a6c5a2f8bf3_Group%2021327-p-500.webp 500w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a4ec02a6c5a2f8bf3_Group%2021327-p-800.webp 800w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a4ec02a6c5a2f8bf3_Group%2021327-p-1080.webp 1080w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a4ec02a6c5a2f8bf3_Group%2021327.webp 1350w"
+            alt=""
+            className="image-big flip is-work"
+            style={{ opacity: "0.9469" }}
+          />
+          <img
+            src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a646a08f93355c3c1_Group%2019372.webp"
+            loading="lazy"
+            sizes="(max-width: 991px) 100vw, (max-width: 1919px) 19vw, 370.9942932128906px"
+            srcSet="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a646a08f93355c3c1_Group%2019372-p-500.webp 500w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a646a08f93355c3c1_Group%2019372-p-800.webp 800w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a646a08f93355c3c1_Group%2019372.webp 1114w"
+            alt=""
+            className="image-medium is-right flip is-we-work"
+            style={{ opacity: "0.9469" }}
+          />
+        </div>
+      </div>
+    },
+    {
+        id:4,
+        content:  <div className="hero_item" style={{ opacity: 1 }}>
+        <div className="hero-visual-top">
+          <div
+            id="w-node-c20467d3-41e8-be18-5d2a-b11dae4d37c2-f148ae1e"
+            className="hero-top-card flip"
+            style={{ opacity: "0.9469" }}
+          >
+            <div className="card-feature">
+              <div>Brand</div>
+            </div>
+            <img
+              src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64bf831e3cd7d03f315ec621_lk-log.svg"
+              loading="lazy"
+              alt=""
+              className="tesla-logo"
+            />
+          </div>
+          <div
+            id="w-node-c20467d3-41e8-be18-5d2a-b11dae4d37c7-f148ae1e"
+            className="hero-top-card flip"
+            style={{ opacity: "0.9469" }}
+          >
+            <div className="card-feature">
+              <div>Size</div>
+            </div>
+            <div className="card-information">
+              Vertical Size
+              <br />‍
+              <span className="text-span">(1080x1350)</span>
+            </div>
+          </div>
+          <div
+            id="w-node-c20467d3-41e8-be18-5d2a-b11dae4d37d1-f148ae1e"
+            className="hero-top-card flip"
+            style={{ opacity: "0.9469" }}
+          >
+            <div className="card-feature">
+              <div>Text</div>
+            </div>
+            <div className="card-information is-2">
+              Reach your ideal custom..
+              <br />
+            </div>
+          </div>
+          <div
+            id="w-node-c20467d3-41e8-be18-5d2a-b11dae4d37d8-f148ae1e"
+            className="hero-top-card flip"
+            style={{ opacity: "0.9469" }}
+          >
+            <div className="card-feature">
+              <div>Image</div>
+            </div>
+            <img
+              src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64bf831f2cb97e10ce6e453c_lk-icn.webp"
+              loading="lazy"
+              alt=""
+              className="brand-image"
+            />
+          </div>
+          <div
+            id="w-node-c20467d3-41e8-be18-5d2a-b11dae4d37dd-f148ae1e"
+            className="hero-arrow w-embed"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="100%"
+              height="100%"
+              viewBox="0 0 13 52.063"
+            >
+              <g
+                id="Group_13230"
+                data-name="Group 13230"
+                transform="translate(-954 -297.845)"
+              >
+                <path
+                  id="Path_25264"
+                  data-name="Path 25264"
+                  d="M144.012,12H94.95"
+                  transform="translate(948.5 443.357) rotate(-90)"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeMiterlimit={10}
+                  strokeWidth={3}
+                  strokeDasharray="1 10"
+                />
+                <path
+                  id="Polygon_51"
+                  data-name="Polygon 51"
+                  d="M5.662,1.29a1,1,0,0,1,1.677,0L12,8.455A1,1,0,0,1,11.157,10H1.843A1,1,0,0,1,1,8.455Z"
+                  transform="translate(967 327) rotate(180)"
+                  fill="currentColor"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div
+          className="hero-item-rotate"
+          style={{
+            willChange: "transform",
+            transform:
+              "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(7.3028deg) rotateY(15.9968deg) rotateZ(0deg) skew(0deg, 0deg)",
+            transformStyle: "preserve-3d",
+          }}
+        >
+          <div className="hero-images" />
+          <img
+            src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c64a2eb5d3e5b85de70fbd_Group%2021325.webp"
+            loading="lazy"
+            sizes="(max-width: 991px) 100vw, (max-width: 1919px) 16vw, 300px"
+            srcSet="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c64a2eb5d3e5b85de70fbd_Group%2021325-p-500.webp 500w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c64a2eb5d3e5b85de70fbd_Group%2021325-p-800.webp 800w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c64a2eb5d3e5b85de70fbd_Group%2021325.webp 902w"
+            alt=""
+            className="image-big flip"
+            style={{ opacity: "0.9469" }}
+          />
+          <img
+            src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c64a2ee4ad5109a7e8e651_Group%2021327.webp"
+            loading="lazy"
+            sizes="(max-width: 991px) 100vw, (max-width: 1919px) 10vw, 192.9971466064453px"
+            srcSet="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c64a2ee4ad5109a7e8e651_Group%2021327-p-500.webp 500w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c64a2ee4ad5109a7e8e651_Group%2021327.webp 580w"
+            alt=""
+            className="image-small flip"
+            style={{ opacity: "0.9469" }}
+          />
+          <img
+            src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c64a2eca5f6f1712ed3d2d_Group%2021326.webp"
+            loading="lazy"
+            sizes="(max-width: 991px) 100vw, (max-width: 1919px) 12vw, 229.99998474121094px"
+            srcSet="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c64a2eca5f6f1712ed3d2d_Group%2021326-p-500.webp 500w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c64a2eca5f6f1712ed3d2d_Group%2021326.webp 694w"
+            alt=""
+            className="image-medium flip"
+            style={{ opacity: "0.9469" }}
+          />
+          <img
+            src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c64a2f4e8053b433663dc1_Group%2021324.webp"
+            loading="lazy"
+            sizes="(max-width: 991px) 100vw, (max-width: 1919px) 12vw, 229.99998474121094px"
+            srcSet="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c64a2f4e8053b433663dc1_Group%2021324-p-500.webp 500w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c64a2f4e8053b433663dc1_Group%2021324.webp 694w"
+            alt=""
+            className="image-medium is-right flip"
+            style={{ opacity: "0.9469" }}
+          />
+          <img
+            src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c64a2efaaf8c07c7887eda_Group%2021323.webp"
+            loading="lazy"
+            srcSet="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c64a2efaaf8c07c7887eda_Group%2021323-p-500.webp 500w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c64a2efaaf8c07c7887eda_Group%2021323.webp 577w"
+            sizes="(max-width: 991px) 100vw, (max-width: 1919px) 10vw, 192.9971466064453px"
+            alt=""
+            className="image-small is-right flip"
+            style={{ opacity: "0.9469" }}
+          />
+        </div>
+      </div>
+    },
+  ]
+  useEffect(()=>{
+    setInterval(() => {
+        setNumber(pre=>{
+            if (pre == listHeroItem.length -1) {
+                return 0
+            } else {
+                return pre +1
+            }
+        })
+    }, 3000);
+  }, [])
   return (
     <div className="section is-hero is-home">
       <div className="hero-content">
@@ -210,575 +844,7 @@ export default function Hero() {
             </a>
           </div>
           <div className="hero-visual is-home">
-            <div className="hero_item is--1" style={{ opacity: 0 }}>
-              <div className="hero-visual-top">
-                <div
-                  id="w-node-aec86962-c603-e087-3187-4a1b1b069dc6-f148ae1e"
-                  className="hero-top-card flip"
-                  style={{ opacity: 1 }}
-                >
-                  <div className="card-feature">
-                    <div className="card-upper-text">Brand</div>
-                  </div>
-                  <img
-                    src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/62d7dc1652a03e5deb010378_tesla-logo.svg"
-                    loading="lazy"
-                    alt="tesla-logo"
-                    width="51.5"
-                    className="tesla-logo"
-                  />
-                </div>
-                <div
-                  id="w-node-cf829446-96b4-ebe0-8471-7849fe6de7a1-f148ae1e"
-                  className="hero-top-card flip"
-                  style={{ opacity: 1 }}
-                >
-                  <div className="card-feature">
-                    <div className="card-upper-text">Size</div>
-                  </div>
-                  <div className="card-information">
-                    Post Size
-                    <br />
-                    <span className="text-span">(1080x1080)</span>
-                  </div>
-                </div>
-                <div
-                  id="w-node-cf2e8de1-02e8-8fbc-35e2-cd7a53367f5b-f148ae1e"
-                  className="hero-top-card flip"
-                  style={{ opacity: 1 }}
-                >
-                  <div className="card-feature">
-                    <div className="card-upper-text">Text</div>
-                  </div>
-                  <div className="card-information is-2">
-                    <span className="text-span-7">Tesla Model S Plaid</span>
-                    <br />
-                    ORDER NOW
-                    <span className="text-span" />
-                  </div>
-                </div>
-                <div
-                  id="w-node-_2dd5d586-50be-6e3d-3729-080814c6c9b4-f148ae1e"
-                  className="hero-top-card flip"
-                  style={{ opacity: 1 }}
-                >
-                  <div className="card-feature">
-                    <div className="card-upper-text">Image</div>
-                  </div>
-                  <img
-                    src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c645e7e4ad5109a7e5a4a1_1154171.webp"
-                    loading="lazy"
-                    alt=""
-                    className="brand-image"
-                  />
-                </div>
-                <div
-                  id="w-node-fb8b40c8-6ab2-1b2e-ecbb-18f9dd80034f-f148ae1e"
-                  className="hero-arrow w-embed"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="100%"
-                    height="100%"
-                    viewBox="0 0 13 52.063"
-                  >
-                    <g
-                      id="Group_13230"
-                      data-name="Group 13230"
-                      transform="translate(-954 -297.845)"
-                    >
-                      <path
-                        id="Path_25264"
-                        data-name="Path 25264"
-                        d="M144.012,12H94.95"
-                        transform="translate(948.5 443.357) rotate(-90)"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeMiterlimit={10}
-                        strokeWidth={3}
-                        strokeDasharray="1 10"
-                      />
-                      <path
-                        id="Polygon_51"
-                        data-name="Polygon 51"
-                        d="M5.662,1.29a1,1,0,0,1,1.677,0L12,8.455A1,1,0,0,1,11.157,10H1.843A1,1,0,0,1,1,8.455Z"
-                        transform="translate(967 327) rotate(180)"
-                        fill="currentColor"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
-              <div className="hero-item-rotate" style={{}}>
-                <div className="hero-images" />
-                <img
-                  src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c51dfd534786a2758e25c8_Group%2021065.webp"
-                  loading="lazy"
-                  alt=""
-                  className="image-small flip"
-                  style={{ opacity: 1 }}
-                />
-                <img
-                  src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c51dfe96fa168ec5a8fe3f_Group%2021307.webp"
-                  loading="lazy"
-                  alt=""
-                  className="image-medium flip"
-                  style={{ opacity: 1 }}
-                />
-                <img
-                  src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c51dff8bcb07f304ca404e_Group%2021308.webp"
-                  loading="lazy"
-                  alt=""
-                  height=""
-                  sizes="(max-width: 991px) 100vw, (max-width: 1919px) 16vw, 300px"
-                  srcSet="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c51dff8bcb07f304ca404e_Group%2021308-p-500.webp 500w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c51dff8bcb07f304ca404e_Group%2021308.webp 600w"
-                  className="image-big flip"
-                  style={{ opacity: 1 }}
-                />
-                <img
-                  src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c51dfe13235e3b217e1b12_Group%2021309.webp"
-                  loading="lazy"
-                  alt=""
-                  className="image-medium is-right flip"
-                  style={{ opacity: 1 }}
-                />
-                <img
-                  src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c51dfeba83e11a926d16f0_Group%2021310.webp"
-                  loading="lazy"
-                  alt=""
-                  className="image-small is-right flip"
-                  style={{ opacity: 1 }}
-                />
-              </div>
-              <img
-                src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c78fb0c49f41a64f34d79a_hero-tesla.webp"
-                loading="lazy"
-                height={320}
-                sizes="(max-width: 479px) 100vw, (max-width: 767px) 499.9999694824219px, (max-width: 991px) 620.95166015625px, 100vw"
-                alt=""
-                srcSet="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c78fb0c49f41a64f34d79a_hero-tesla-p-500.webp 500w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c78fb0c49f41a64f34d79a_hero-tesla-p-800.webp 800w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c78fb0c49f41a64f34d79a_hero-tesla-p-1080.webp 1080w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c78fb0c49f41a64f34d79a_hero-tesla-p-1600.webp 1600w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c78fb0c49f41a64f34d79a_hero-tesla-p-2000.webp 2000w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c78fb0c49f41a64f34d79a_hero-tesla-p-2600.webp 2600w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c78fb0c49f41a64f34d79a_hero-tesla.webp 3619w"
-                className="mobile-tesla"
-              />
-            </div>
-            <div className="hero_item active" style={{ opacity: 1 }}>
-              <div className="hero-visual-top">
-                <div
-                  id="w-node-c77e899e-c707-4595-841f-a516ce2bef50-f148ae1e"
-                  className="hero-top-card flip"
-                  style={{ opacity: 1 }}
-                >
-                  <div className="card-feature">
-                    <div>Brand</div>
-                  </div>
-                  <img
-                    src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/633960aead6a6dfa2a03c1f7_ua-logo.svg"
-                    loading="lazy"
-                    alt="UA Logo"
-                    className="tesla-logo"
-                  />
-                </div>
-                <div
-                  id="w-node-c77e899e-c707-4595-841f-a516ce2bef55-f148ae1e"
-                  className="hero-top-card flip"
-                  style={{ opacity: 1 }}
-                >
-                  <div className="card-feature">
-                    <div>Size</div>
-                  </div>
-                  <div className="card-information">
-                    Vertical Size
-                    <br />‍<span className="text-span">(1080x1350)</span>
-                  </div>
-                </div>
-                <div
-                  id="w-node-c77e899e-c707-4595-841f-a516ce2bef5e-f148ae1e"
-                  className="hero-top-card flip"
-                  style={{ opacity: 1 }}
-                >
-                  <div className="card-feature">
-                    <div>Text</div>
-                  </div>
-                  <div className="card-information is-2">
-                    Reach your ideal custom..
-                    <br />
-                  </div>
-                </div>
-                <div
-                  id="w-node-c77e899e-c707-4595-841f-a516ce2bef68-f148ae1e"
-                  className="hero-top-card flip"
-                  style={{ opacity: 1 }}
-                >
-                  <div className="card-feature">
-                    <div>Image</div>
-                  </div>
-                  <img
-                    src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c645a7faaf8c07c784cec1_iScreen%20Shoter%20-%2020230709190222343.webp"
-                    loading="lazy"
-                    alt=""
-                    className="brand-image"
-                  />
-                </div>
-                <div
-                  id="w-node-c77e899e-c707-4595-841f-a516ce2bef6d-f148ae1e"
-                  className="hero-arrow w-embed"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="100%"
-                    height="100%"
-                    viewBox="0 0 13 52.063"
-                  >
-                    <g
-                      id="Group_13230"
-                      data-name="Group 13230"
-                      transform="translate(-954 -297.845)"
-                    >
-                      <path
-                        id="Path_25264"
-                        data-name="Path 25264"
-                        d="M144.012,12H94.95"
-                        transform="translate(948.5 443.357) rotate(-90)"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeMiterlimit={10}
-                        strokeWidth={3}
-                        strokeDasharray="1 10"
-                      />
-                      <path
-                        id="Polygon_51"
-                        data-name="Polygon 51"
-                        d="M5.662,1.29a1,1,0,0,1,1.677,0L12,8.455A1,1,0,0,1,11.157,10H1.843A1,1,0,0,1,1,8.455Z"
-                        transform="translate(967 327) rotate(180)"
-                        fill="currentColor"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
-              <div className="hero-item-rotate" style={{}}>
-                <div className="hero-images" />
-                <img
-                  src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a6239c7da1bfd605e_Group%2021323.webp"
-                  loading="lazy"
-                  sizes="(max-width: 991px) 100vw, (max-width: 1919px) 10vw, 192.9971466064453px"
-                  srcSet="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a6239c7da1bfd605e_Group%2021323-p-500.webp 500w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a6239c7da1bfd605e_Group%2021323.webp 580w"
-                  alt=""
-                  className="image-small flip"
-                  style={{ opacity: 1 }}
-                />
-                <img
-                  src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490ab5d3e5b85de62117_Group%2021324.webp"
-                  loading="lazy"
-                  sizes="(max-width: 991px) 100vw, (max-width: 1919px) 12vw, 229.99998474121094px"
-                  srcSet="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490ab5d3e5b85de62117_Group%2021324-p-500.webp 500w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490ab5d3e5b85de62117_Group%2021324.webp 694w"
-                  alt=""
-                  className="image-medium flip"
-                  style={{ opacity: 1 }}
-                />
-                <img
-                  src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a6239c7da1bfd605e_Group%2021323.webp"
-                  loading="lazy"
-                  sizes="(max-width: 991px) 100vw, (max-width: 1919px) 16vw, 300px"
-                  srcSet="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a6239c7da1bfd605e_Group%2021323-p-500.webp 500w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a6239c7da1bfd605e_Group%2021323.webp 580w"
-                  alt=""
-                  className="image-big flip"
-                  style={{ opacity: 1 }}
-                />
-                <img
-                  src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a8034e6797135ad49_Group%2021325.webp"
-                  loading="lazy"
-                  sizes="(max-width: 991px) 100vw, (max-width: 1919px) 12vw, 229.99998474121094px"
-                  srcSet="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a8034e6797135ad49_Group%2021325-p-500.webp 500w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a8034e6797135ad49_Group%2021325-p-800.webp 800w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a8034e6797135ad49_Group%2021325.webp 901w"
-                  alt=""
-                  className="image-medium is-right flip"
-                  style={{ opacity: 1 }}
-                />
-                <img
-                  src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a62db2b29ae79f470_Group%2013100.webp"
-                  loading="lazy"
-                  srcSet="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a62db2b29ae79f470_Group%2013100-p-500.webp 500w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a62db2b29ae79f470_Group%2013100.webp 577w"
-                  sizes="(max-width: 991px) 100vw, (max-width: 1919px) 10vw, 192.9971466064453px"
-                  alt=""
-                  className="image-small is-right flip"
-                  style={{ opacity: 1 }}
-                />
-              </div>
-            </div>
-            <div className="hero_item" style={{ opacity: 0 }}>
-              <div className="hero-visual-top">
-                <div
-                  id="w-node-b558ac4a-b15d-75eb-eeb0-55f8eeddf16b-f148ae1e"
-                  className="hero-top-card flip"
-                  style={{ opacity: 1 }}
-                >
-                  <div className="card-feature">
-                    <div>Brand</div>
-                  </div>
-                  <img
-                    src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/62f55fa974adcf7d879ff234_wework-logo.svg"
-                    loading="lazy"
-                    alt="wework-logo"
-                    className="tesla-logo"
-                  />
-                </div>
-                <div
-                  id="w-node-b558ac4a-b15d-75eb-eeb0-55f8eeddf170-f148ae1e"
-                  className="hero-top-card flip"
-                  style={{ opacity: 1 }}
-                >
-                  <div className="card-feature">
-                    <div>Size</div>
-                  </div>
-                  <div className="card-information">
-                    Landscape
-                    <br />
-                    (1200x628)
-                  </div>
-                </div>
-                <div
-                  id="w-node-b558ac4a-b15d-75eb-eeb0-55f8eeddf17a-f148ae1e"
-                  className="hero-top-card flip"
-                  style={{ opacity: 1 }}
-                >
-                  <div className="card-feature">
-                    <div>Text</div>
-                  </div>
-                  <div className="card-information is-2">
-                    Much more than an offic..
-                    <br />
-                  </div>
-                </div>
-                <div
-                  id="w-node-b558ac4a-b15d-75eb-eeb0-55f8eeddf181-f148ae1e"
-                  className="hero-top-card flip"
-                  style={{ opacity: 1 }}
-                >
-                  <div className="card-feature">
-                    <div>Image</div>
-                  </div>
-                  <img
-                    src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c645a7ca5f6f1712e972b7_add.webp"
-                    loading="lazy"
-                    alt=""
-                    className="brand-image"
-                  />
-                </div>
-                <div
-                  id="w-node-b558ac4a-b15d-75eb-eeb0-55f8eeddf186-f148ae1e"
-                  className="hero-arrow w-embed"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="100%"
-                    height="100%"
-                    viewBox="0 0 13 52.063"
-                  >
-                    <g
-                      id="Group_13230"
-                      data-name="Group 13230"
-                      transform="translate(-954 -297.845)"
-                    >
-                      <path
-                        id="Path_25264"
-                        data-name="Path 25264"
-                        d="M144.012,12H94.95"
-                        transform="translate(948.5 443.357) rotate(-90)"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeMiterlimit={10}
-                        strokeWidth={3}
-                        strokeDasharray="1 10"
-                      />
-                      <path
-                        id="Polygon_51"
-                        data-name="Polygon 51"
-                        d="M5.662,1.29a1,1,0,0,1,1.677,0L12,8.455A1,1,0,0,1,11.157,10H1.843A1,1,0,0,1,1,8.455Z"
-                        transform="translate(967 327) rotate(180)"
-                        fill="currentColor"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
-              <div className="hero-item-rotate" style={{}}>
-                <div className="hero-images" />
-                <img
-                  src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a2cff33c4e44db0e4_Group%2021326.webp"
-                  loading="lazy"
-                  sizes="(max-width: 991px) 100vw, (max-width: 1919px) 19vw, 370.9942932128906px"
-                  srcSet="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a2cff33c4e44db0e4_Group%2021326-p-500.webp 500w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a2cff33c4e44db0e4_Group%2021326-p-800.webp 800w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a2cff33c4e44db0e4_Group%2021326-p-1080.webp 1080w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a2cff33c4e44db0e4_Group%2021326.webp 1114w"
-                  alt=""
-                  className="image-medium flip is-we-work"
-                  style={{ opacity: 1 }}
-                />
-                <img
-                  src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a4ec02a6c5a2f8bf3_Group%2021327.webp"
-                  loading="lazy"
-                  sizes="(max-width: 991px) 100vw, (max-width: 1919px) 23vw, 448.9985656738281px"
-                  srcSet="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a4ec02a6c5a2f8bf3_Group%2021327-p-500.webp 500w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a4ec02a6c5a2f8bf3_Group%2021327-p-800.webp 800w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a4ec02a6c5a2f8bf3_Group%2021327-p-1080.webp 1080w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a4ec02a6c5a2f8bf3_Group%2021327.webp 1350w"
-                  alt=""
-                  className="image-big flip is-work"
-                  style={{ opacity: 1 }}
-                />
-                <img
-                  src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a646a08f93355c3c1_Group%2019372.webp"
-                  loading="lazy"
-                  sizes="(max-width: 991px) 100vw, (max-width: 1919px) 19vw, 370.9942932128906px"
-                  srcSet="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a646a08f93355c3c1_Group%2019372-p-500.webp 500w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a646a08f93355c3c1_Group%2019372-p-800.webp 800w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c6490a646a08f93355c3c1_Group%2019372.webp 1114w"
-                  alt=""
-                  className="image-medium is-right flip is-we-work"
-                  style={{ opacity: 1 }}
-                />
-              </div>
-            </div>
-            <div className="hero_item" style={{ opacity: 0 }}>
-              <div className="hero-visual-top">
-                <div
-                  id="w-node-c20467d3-41e8-be18-5d2a-b11dae4d37c2-f148ae1e"
-                  className="hero-top-card flip"
-                  style={{ opacity: 1 }}
-                >
-                  <div className="card-feature">
-                    <div>Brand</div>
-                  </div>
-                  <img
-                    src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64bf831e3cd7d03f315ec621_lk-log.svg"
-                    loading="lazy"
-                    alt=""
-                    className="tesla-logo"
-                  />
-                </div>
-                <div
-                  id="w-node-c20467d3-41e8-be18-5d2a-b11dae4d37c7-f148ae1e"
-                  className="hero-top-card flip"
-                  style={{ opacity: 1 }}
-                >
-                  <div className="card-feature">
-                    <div>Size</div>
-                  </div>
-                  <div className="card-information">
-                    Vertical Size
-                    <br />‍<span className="text-span">(1080x1350)</span>
-                  </div>
-                </div>
-                <div
-                  id="w-node-c20467d3-41e8-be18-5d2a-b11dae4d37d1-f148ae1e"
-                  className="hero-top-card flip"
-                  style={{ opacity: 1 }}
-                >
-                  <div className="card-feature">
-                    <div>Text</div>
-                  </div>
-                  <div className="card-information is-2">
-                    Reach your ideal custom..
-                    <br />
-                  </div>
-                </div>
-                <div
-                  id="w-node-c20467d3-41e8-be18-5d2a-b11dae4d37d8-f148ae1e"
-                  className="hero-top-card flip"
-                  style={{ opacity: 1 }}
-                >
-                  <div className="card-feature">
-                    <div>Image</div>
-                  </div>
-                  <img
-                    src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64bf831f2cb97e10ce6e453c_lk-icn.webp"
-                    loading="lazy"
-                    alt=""
-                    className="brand-image"
-                  />
-                </div>
-                <div
-                  id="w-node-c20467d3-41e8-be18-5d2a-b11dae4d37dd-f148ae1e"
-                  className="hero-arrow w-embed"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="100%"
-                    height="100%"
-                    viewBox="0 0 13 52.063"
-                  >
-                    <g
-                      id="Group_13230"
-                      data-name="Group 13230"
-                      transform="translate(-954 -297.845)"
-                    >
-                      <path
-                        id="Path_25264"
-                        data-name="Path 25264"
-                        d="M144.012,12H94.95"
-                        transform="translate(948.5 443.357) rotate(-90)"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeMiterlimit={10}
-                        strokeWidth={3}
-                        strokeDasharray="1 10"
-                      />
-                      <path
-                        id="Polygon_51"
-                        data-name="Polygon 51"
-                        d="M5.662,1.29a1,1,0,0,1,1.677,0L12,8.455A1,1,0,0,1,11.157,10H1.843A1,1,0,0,1,1,8.455Z"
-                        transform="translate(967 327) rotate(180)"
-                        fill="currentColor"
-                      />
-                    </g>
-                  </svg>
-                </div>
-              </div>
-              <div className="hero-item-rotate" style={{}}>
-                <div className="hero-images" />
-                <img
-                  src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c64a2eb5d3e5b85de70fbd_Group%2021325.webp"
-                  loading="lazy"
-                  sizes="(max-width: 991px) 100vw, (max-width: 1919px) 16vw, 300px"
-                  srcSet="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c64a2eb5d3e5b85de70fbd_Group%2021325-p-500.webp 500w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c64a2eb5d3e5b85de70fbd_Group%2021325-p-800.webp 800w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c64a2eb5d3e5b85de70fbd_Group%2021325.webp 902w"
-                  alt=""
-                  className="image-big flip"
-                  style={{ opacity: 1 }}
-                />
-                <img
-                  src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c64a2ee4ad5109a7e8e651_Group%2021327.webp"
-                  loading="lazy"
-                  sizes="(max-width: 991px) 100vw, (max-width: 1919px) 10vw, 192.9971466064453px"
-                  srcSet="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c64a2ee4ad5109a7e8e651_Group%2021327-p-500.webp 500w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c64a2ee4ad5109a7e8e651_Group%2021327.webp 580w"
-                  alt=""
-                  className="image-small flip"
-                  style={{ opacity: 1 }}
-                />
-                <img
-                  src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c64a2eca5f6f1712ed3d2d_Group%2021326.webp"
-                  loading="lazy"
-                  sizes="(max-width: 991px) 100vw, (max-width: 1919px) 12vw, 229.99998474121094px"
-                  srcSet="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c64a2eca5f6f1712ed3d2d_Group%2021326-p-500.webp 500w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c64a2eca5f6f1712ed3d2d_Group%2021326.webp 694w"
-                  alt=""
-                  className="image-medium flip"
-                  style={{ opacity: 1 }}
-                />
-                <img
-                  src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c64a2f4e8053b433663dc1_Group%2021324.webp"
-                  loading="lazy"
-                  sizes="(max-width: 991px) 100vw, (max-width: 1919px) 12vw, 229.99998474121094px"
-                  srcSet="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c64a2f4e8053b433663dc1_Group%2021324-p-500.webp 500w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c64a2f4e8053b433663dc1_Group%2021324.webp 694w"
-                  alt=""
-                  className="image-medium is-right flip"
-                  style={{ opacity: 1 }}
-                />
-                <img
-                  src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c64a2efaaf8c07c7887eda_Group%2021323.webp"
-                  loading="lazy"
-                  srcSet="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c64a2efaaf8c07c7887eda_Group%2021323-p-500.webp 500w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c64a2efaaf8c07c7887eda_Group%2021323.webp 577w"
-                  sizes="(max-width: 991px) 100vw, (max-width: 1919px) 10vw, 192.9971466064453px"
-                  alt=""
-                  className="image-small is-right flip"
-                  style={{ opacity: 1 }}
-                />
-              </div>
-            </div>
+            {listHeroItem[number].content}
           </div>
         </div>
         <div
