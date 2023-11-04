@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en" class="w-mod-js w-mod-ix mdl-js">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Vite + React</title>
+
+    <style>.wf-force-outline-none[tabindex="-1"]:focus{outline:none;}</style>
+    <style data-tippy-stylesheet="">.tippy-tooltip[data-animation=fade][data-state=hidden]{opacity:0}.tippy-iOS{cursor:pointer!important;-webkit-tap-highlight-color:transparent}.tippy-popper{pointer-events:none;max-width:calc(100vw - 10px);transition-timing-function:cubic-bezier(.165,.84,.44,1);transition-property:transform}.tippy-tooltip{position:relative;color:#fff;border-radius:4px;font-size:14px;line-height:1.4;background-color:#333;transition-property:visibility,opacity,transform;outline:0}.tippy-tooltip[data-placement^=top]>.tippy-arrow{border-width:8px 8px 0;border-top-color:#333;margin:0 3px;transform-origin:50% 0;bottom:-7px}.tippy-tooltip[data-placement^=bottom]>.tippy-arrow{border-width:0 8px 8px;border-bottom-color:#333;margin:0 3px;transform-origin:50% 7px;top:-7px}.tippy-tooltip[data-placement^=left]>.tippy-arrow{border-width:8px 0 8px 8px;border-left-color:#333;margin:3px 0;transform-origin:0 50%;right:-7px}.tippy-tooltip[data-placement^=right]>.tippy-arrow{border-width:8px 8px 8px 0;border-right-color:#333;margin:3px 0;transform-origin:7px 50%;left:-7px}.tippy-tooltip[data-interactive][data-state=visible]{pointer-events:auto}.tippy-tooltip[data-inertia][data-state=visible]{transition-timing-function:cubic-bezier(.54,1.5,.38,1.11)}.tippy-arrow{position:absolute;border-color:transparent;border-style:solid}.tippy-content{padding:5px 9px}</style>
+    <style>@media (min-width:992px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="55590f16-e3c5-8ad3-ebbb-8862f752f654"] {width:0px;opacity:0;}}@media (max-width:991px) and (min-width:768px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="55590f16-e3c5-8ad3-ebbb-8862f752f654"] {-webkit-transform:translate3d(-50%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-50%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-50%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-50%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}}@media (max-width:767px) and (min-width:480px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="55590f16-e3c5-8ad3-ebbb-8862f752f654"] {-webkit-transform:translate3d(-50%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-50%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-50%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-50%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}}@media (max-width:479px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="55590f16-e3c5-8ad3-ebbb-8862f752f654"] {-webkit-transform:translate3d(-50%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-50%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-50%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-50%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}}</style>
+    <style>
+      .tippy-tooltip.adctippy-theme {
+        background-color: #3B2A82;
+        border-radius: 10px;
+        color: #FFFFFF;
+        padding: 1rem;
+      }
+      
+      </style>
+    <style type="text/css">.styles__sound_icon___23DuG{
+      cursor: pointer;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+    .styles__sound_icon___23DuG svg{
+      width: 2rem;
+      height: 2rem;
+    }
+    .styles__sound_icon_auto_width___EVA69 svg{
+      width: auto;
+      height: auto;
+    }
+    .styles__sound_icon___23DuG svg path{
+      -webkit-transition: fill .5s;
+      transition: fill .5s;
+    }
+    .styles__sound_active___2_Hr_ svg path{
+      fill: #7AC70C;
+    }</style>
+    <style id="weglot-switcher-default">aside.country-selector.weglot_switcher.default.wg-drop ul {
+      top: 38px;
+      bottom: auto;
+    }
+    
+    aside.country-selector.weglot_switcher.default.wg-drop.weg-openup ul {
+      bottom: 38px;
+      top: auto;
+    }
+    
+    aside.country-selector.weglot_switcher.default a {
+      font-size: 13px;
+    }
+    
+    aside.country-selector.weglot_switcher.default.wg-drop a img.wg-flag {
+      height: 30px;
+    }
+    
+    aside.country-selector.weglot_switcher.default.wg-drop .wg-li.wgcurrent {
+      height: 38px;
+      display: flex;
+      align-items: center;
+    }
+    
+    aside.country-selector.weglot_switcher.default.wg-drop a {
+      height: 38px;
+    }
+    
+    aside.country-selector.weglot_switcher.default .wgcurrent:after {
+      height: 38px;
+      background-size: 9px;
+    }
+    
+    aside.country-selector.weglot_switcher.default.wg-drop .wgcurrent a {
+      padding-right: 40px;
+      padding-left: 10px;
+    }</style>
+    <style>
+      .ejoy-sub-active{
+        color: #1296ba !important;
+      }
+      
+      .ejoy-sub-hovered{
+        color: #1296ba !important;
+      }
+      .ejoy-sub-clzz{
+        cursor: pointer;
+        
+        lineHeight: 1.2;
+          font-size: 28px;
+          color: #FFCC00; background: rgba(17, 17, 17, 0.7);
+        
+      }
+      .ejoy-sub-clzz:hover{
+        color: #1296ba !important;
+      }
+      .ej-trans-sub{
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999999;
+        cursor: move;
+      }
+      .ej-trans-sub > span{
+        color: #3CF9ED;
+        font-size: 18px;
+        text-align: center;
+        padding: 0 16px;
+        line-height: 1.5;
+        background: rgba(32, 26, 25, 0.8);
+        text-shadow: 0px 1px 4px black;
+        padding: 0 8px;
+        
+        lineHeight: 1.2;
+        font-size: 16px;
+        color: #0CB1C7; background: rgba(67, 65, 65, 0.7);
+      
+      }
+      .ej-full-screen-video{
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 30px;
+        right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 99999999;
+        cursor: pointer;
+      }
+      .ej-main-sub{
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 99999999;
+        cursor: move;
+        padding: 0 8px;
+      }
+      .ej-main-sub > span{
+        color: white;
+        font-size: 20px;
+        line-height: 1.5;
+        text-align: center;
+        background: rgba(32, 26, 25, 0.8);
+        padding: 2px 8px;
+        
+        lineHeight: 1.2;
+          font-size: 28px;
+          color: #FFCC00; background: rgba(17, 17, 17, 0.7);
+        
+      }
+
+      .ej-main-sub .ejoy-sub-clzz{
+        background: transparent !important
+      }
+
+      .tran-subtitle > span{
+        cursor: pointer;
+        padding-left: 10px;
+        top: 2px;
+        position: relative;
+      }
+
+      .tran-subtitle > span > span{
+        position: absolute;
+        top: -170%;
+        background: rgba(0,0,0,0.5);
+        font-size: 13px;
+        line-height: 20px;
+        padding: 2px 8px;
+        color: white;
+        display: none;
+        border-radius: 4px;
+        white-space: nowrap;
+        left: -50%;
+        font-weight: normal;
+      }
+
+      .viewPopupPro {
+        z-index: 2147483647;
+        cursor: auto;
+        position: absolute;
+        z-index: 2147483647;
+        background: #111111;
+        transition: opacity 1s;
+        width: 172px;
+        height: 66px;
+        opacity: 1;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .titlePopupPro {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 12px;
+        color: #E5E5E5;
+        text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+      }
+  
+      .viewGoPro {
+        background: #FFCC00;
+        border-radius: 72.6257px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 8px;
+        padding-left: 10px;
+        cursor: pointer;
+  
+      }
+
+      .viewGoPro svg {
+        pointer-events: none;
+      }
+      
+      .textGoPro {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 10px;
+        line-height: 12px;
+        pointer-events: none;
+        text-align: center;
+        color: #FFFFFF;
+        padding: 4px 14px 4px 4px;
+      }
+
+      .viewPopupPro{
+        top: auto !important;
+        bottom: 15px !important;
+      }
+
+      .view-icon-copy-main-sub:hover > span,
+      .view-icon-edit-sub:hover > span,
+      .view-icon-exit-full-sub:hover > span,
+      .view-icon-full-sub:hover > span,
+      .iconCrownGoPro:hover > span,
+      .view-icon-copy-tran-sub:hover > span {
+        display: block;
+      }
+
+      .iconCrownGoPro{
+        padding-left: 0px !important;
+        padding-right: 8px !important;
+      }
+      .iconCrownGoPro svg{
+        width: 17px;
+        height: 17px;
+      }
+      .view-icon-full-sub, .view-icon-exit-full-sub {
+        display: flex;
+      }
+
+      .view-icon-full-sub > svg, .view-icon-exit-full-sub > svg {
+        pointer-events: none;
+      }
+
+      .tran-subtitle > span > svg{
+        width: 16px;
+        height: 16px;
+        pointer-events: none;
+        display: inline-flex !important;
+        vertical-align: baseline !important;
+      }
+      
+      .view-icon-copy-main-sub > svg{
+        pointer-events: none;
+        color: #FFCC00
+      }
+
+      .iconCrownGoPro{
+        padding-left: 0 !important;
+        padding-right: 8px !important;
+      }
+      .view-icon-copy-tran-sub > svg{
+        pointer-events: none;
+        color: #0CB1C7
+      }
+
+      </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
