@@ -22,7 +22,7 @@ export default function WhySticky() {
               <div className="button-and-text-wrapper left-aligned">
                 <a
                   data-ps="target"
-                  href="https://app.adcreative.ai/Identity/Account/Register"
+                  href="/signup"
                   target="_blank"
                   className="main-button is-general w-inline-block"
                 >

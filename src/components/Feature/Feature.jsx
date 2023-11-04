@@ -457,7 +457,7 @@ export default function Feature() {
           >
             <a
               data-ps="target"
-              href="https://app.adcreative.ai/Identity/Account/Register"
+              href="/signup"
               target="_blank"
               className="main-button w-inline-block"
             >

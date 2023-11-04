@@ -180,7 +180,7 @@ export default function IsPricing() {
           <div className="button-and-text-absolute-bottom">
             <a
               data-ps="target"
-              href="https://app.adcreative.ai/Identity/Account/Register"
+              href="/signup"
               target="_blank"
               className="main-button white-purple-h w-inline-block"
             >

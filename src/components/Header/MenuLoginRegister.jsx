@@ -4,7 +4,7 @@ export default function MenuLoginRegister() {
   return (
 <div className="menu-login-and-register">
   <a
-    href="https://app.adcreative.ai/Identity/Account/Login"
+    href="/signup"
     className="nav-item__link is-navbar top-nav is-pink w-inline-block"
   >
     <div className="nav-item-logo-wrapper is-nav upper" />
@@ -14,7 +14,7 @@ export default function MenuLoginRegister() {
     <div className="hero-content__logo-wrapper is-top-navbar">
       <a
         data-ps="target"
-        href="https://app.adcreative.ai/Identity/Account/Register"
+        href="/signup"
         target="_blank"
         className="logo-white-wrapperr is-red is-top-navbar w-inline-block"
       >

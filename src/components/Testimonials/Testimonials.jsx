@@ -244,7 +244,7 @@ export default function Testimonials() {
             <div className="button-and-text-wrapper horizontal">
               <a
                 data-ps="target"
-                href="https://app.adcreative.ai/Identity/Account/Register"
+                href="/signup"
                 target="_blank"
                 className="main-button white-purple-h w-inline-block"
               >

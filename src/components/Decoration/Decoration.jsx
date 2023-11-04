@@ -303,7 +303,7 @@ export default function Decoration() {
           <div className="button-and-text-wrapper">
             <a
               data-ps="target"
-              href="https://app.adcreative.ai/Identity/Account/Register"
+              href="/signup"
               target="_blank"
               className="main-button is-general w-inline-block"
             >
@@ -475,7 +475,7 @@ export default function Decoration() {
           <div className="button-and-text-wrapper">
             <a
               data-ps="target"
-              href="https://app.adcreative.ai/Identity/Account/Register"
+              href="/signup"
               target="_blank"
               className="main-button is-general w-inline-block"
             >

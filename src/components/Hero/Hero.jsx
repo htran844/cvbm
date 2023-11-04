@@ -761,7 +761,7 @@ export default function Hero() {
                 Generate ad creatives that outperform your competitors.
               </strong>
               <a
-                href="https://app.adcreative.ai/Identity/Account/Register"
+                href="/signup"
                 target="_blank"
               >
                 <strong>
@@ -772,7 +772,7 @@ export default function Hero() {
             <div className="space-medium" />
             <a
               data-ps="target"
-              href="https://app.adcreative.ai/Identity/Account/Register"
+              href="/signup"
               target="_blank"
               className="main-button is-hero w-inline-block"
             >
