@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from "react";
+import Aos from "aos";
+import 'aos/dist/aos.css'
 
 export default function Hero() {
   const [isShowMenu, setShowMenu] = useState(false);
   const [isShowMenuFeature, setShowMenuFeature] = useState(false);
   const [isShowMenuUsecase, setShowMenuUsecase] = useState(false);
   const [number, setNumber] = useState(0);
+  useEffect(()=>{
+    Aos.init({duration: 1000})
+  },[])
   const listHeroItem = [
     {
         id:1,
@@ -121,6 +126,7 @@ export default function Hero() {
               "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(7.3028deg) rotateY(15.9968deg) rotateZ(0deg) skew(0deg, 0deg)",
             transformStyle: "preserve-3d",
           }}
+          data-aos='flip-right'
         >
           <div className="hero-images" />
           <img

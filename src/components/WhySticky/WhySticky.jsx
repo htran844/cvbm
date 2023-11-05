@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Aos from "aos";
+import 'aos/dist/aos.css'
 
 export default function WhySticky() {
+  useEffect(()=>{
+    Aos.init({duration: 1000})
+  },[])
   return (
     <div className="section sticky">
       <div className="container">
@@ -101,7 +106,7 @@ export default function WhySticky() {
               </div>
             </div>
             <div className="sticky-content_informations is-home">
-              <div className="sticky-content__feature" style={{ opacity: 1 }}>
+              <div className="sticky-content__feature" data-aos="fade-left" style={{ opacity: 1 }}>
                 <div className="sticky-content__feature-icon-wrapper">
                   <div className="logo-white-wrapperr is-red with-shadow">
                     <div className="login-text hidden-mobile">Login</div>
@@ -125,7 +130,7 @@ export default function WhySticky() {
                   up-to-date creatives with a sole purpose: conversion.
                 </p>
               </div>
-              <div className="sticky-content__feature" style={{ opacity: 1 }}>
+              <div className="sticky-content__feature" data-aos="fade-left" style={{ opacity: 1 }}>
                 <div className="sticky-content__feature-icon-wrapper">
                   <div className="logo-white-wrapperr is-red with-shadow">
                     <div className="login-text hidden-mobile">Login</div>
@@ -149,7 +154,7 @@ export default function WhySticky() {
                   with no data-driven approach.
                 </p>
               </div>
-              <div className="sticky-content__feature" style={{ opacity: 1 }}>
+              <div className="sticky-content__feature" data-aos="fade-left" style={{ opacity: 1 }}>
                 <div className="sticky-content__feature-icon-wrapper">
                   <div className="logo-white-wrapperr is-red with-shadow">
                     <div className="login-text hidden-mobile">Login</div>
@@ -173,7 +178,7 @@ export default function WhySticky() {
                   designed to match your ad creative/banner needs.
                 </p>
               </div>
-              <div className="sticky-content__feature" style={{ opacity: 1 }}>
+              <div className="sticky-content__feature" data-aos="fade-left" style={{ opacity: 1 }}>
                 <div className="sticky-content__feature-icon-wrapper">
                   <div className="logo-white-wrapperr is-red with-shadow">
                     <div className="login-text hidden-mobile">Login</div>
@@ -197,7 +202,7 @@ export default function WhySticky() {
                   create seamless designs that fit your branding.
                 </p>
               </div>
-              <div className="sticky-content__feature" style={{ opacity: 1 }}>
+              <div className="sticky-content__feature" data-aos="fade-left" style={{ opacity: 1 }}>
                 <div className="sticky-content__feature-icon-wrapper">
                   <div className="logo-white-wrapperr is-red with-shadow">
                     <div className="login-text hidden-mobile">Login</div>
@@ -221,7 +226,7 @@ export default function WhySticky() {
                   and Zapier to help you make the most of AdCreative.ai.
                 </p>
               </div>
-              <div className="sticky-content__feature" style={{ opacity: 1 }}>
+              <div className="sticky-content__feature" data-aos="fade-left" style={{ opacity: 1 }}>
                 <div className="sticky-content__feature-icon-wrapper">
                   <div className="logo-white-wrapperr is-red with-shadow">
                     <div className="login-text hidden-mobile">Login</div>
@@ -245,7 +250,7 @@ export default function WhySticky() {
                   creatives simultaneously under one main account.
                 </p>
               </div>
-              <div className="sticky-content__feature" style={{ opacity: 1 }}>
+              <div className="sticky-content__feature" data-aos="fade-left" style={{ opacity: 1 }}>
                 <div className="sticky-content__feature-icon-wrapper">
                   <div className="logo-white-wrapperr is-red with-shadow">
                     <div className="login-text hidden-mobile">Login</div>
@@ -269,7 +274,7 @@ export default function WhySticky() {
                   AdCreative.ai
                 </p>
               </div>
-              <div className="sticky-content__feature" style={{ opacity: 1 }}>
+              <div className="sticky-content__feature" data-aos="fade-left" style={{ opacity: 1 }}>
                 <div className="sticky-content__feature-icon-wrapper">
                   <div className="logo-white-wrapperr is-red with-shadow">
                     <div className="login-text hidden-mobile">Login</div>
@@ -292,7 +297,7 @@ export default function WhySticky() {
                   See which creatives perform the best on your ad accounts.
                 </p>
               </div>
-              <div className="sticky-content__feature" style={{ opacity: 1 }}>
+              <div className="sticky-content__feature" data-aos="fade-left" style={{ opacity: 1 }}>
                 <div className="sticky-content__feature-icon-wrapper">
                   <div className="logo-white-wrapperr is-red with-shadow">
                     <div className="login-text hidden-mobile">Login</div>

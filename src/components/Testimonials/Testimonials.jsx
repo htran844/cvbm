@@ -1,10 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import {animated, useSpring} from 'react-spring'
 
 export default function Testimonials() {
+  const styles = useSpring({
+    from: {opacity: 0},
+    to: {opacity: 1},
+    // reverse: flip
+  })
+  useEffect(()=>{
+    Aos.init({duration: 1000})
+  },[])
     const listTesti = [
         {
             img: "https://assets-global.website-files.com/62d901050b694cd462d2879c/62f3c7c9523cfa5823870041_testimonial-2.webp",
-            content:  <div className="div-block">
+            content:  <div className="div-block" data-aos="flip-right">
             <div className="testimonial-name">
               Partha Bhattacharya
             </div>
@@ -30,7 +41,7 @@ export default function Testimonials() {
         },
         {
             img: "https://assets-global.website-files.com/62d901050b694cd462d2879c/62d9013383d7a466b1dd002f_testimonial-image.webp",
-            content: <div className="div-block">
+            content: <div className="div-block" data-aos="flip-right">
             <div className="testimonial-name">David N.</div>
             <p className="testimonial-title">
               VP Digital Marketing
@@ -55,7 +66,7 @@ export default function Testimonials() {
         },
         {
             img: "https://assets-global.website-files.com/62d901050b694cd462d2879c/62f3c7de5ec74f0b7342337c_testimonial-3.webp",
-            content: <div className="div-block">
+            content: <div className="div-block" data-aos="flip-right">
             <div className="testimonial-name">Matthew W.</div>
             <p className="testimonial-title">
               Founder &amp; CEO at Rapid Alpha
@@ -80,6 +91,11 @@ export default function Testimonials() {
        
     ]
     const [number, setNumber] = useState(2)
+    useEffect(()=>{
+      console.log("refresh")
+      Aos.refresh()
+      Aos.init({duration: 500})
+    },[number])
   return (
     <div className="section is-testimonials">
       <div className="container testimonials">
@@ -114,19 +130,20 @@ export default function Testimonials() {
                   zIndex: 7,
                   transform:
                     "translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(-180deg)",
+                  
                 }}
                 aria-label="6 / 6"
               >
                 <div className="testimonial-wrapper">
                   <div className="testimonial-insider">
-                    <div className="testimonial-image">
+                    <animated.div className="testimonial-image" style={styles}>
                       <img
                         alt=""
                         loading="lazy"
                         src={listTesti[number]?.img}
                         className="image"
                       />
-                    </div>
+                    </animated.div>
                   </div>
                 </div>
               </div>
