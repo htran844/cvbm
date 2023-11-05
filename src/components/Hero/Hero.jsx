@@ -168,7 +168,7 @@ export default function Hero() {
             style={{ opacity: "0.9469" }}
           />
         </div>
-        <img
+        {/* <img
           src="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c78fb0c49f41a64f34d79a_hero-tesla.webp"
           loading="lazy"
           height={320}
@@ -176,7 +176,7 @@ export default function Hero() {
           alt=""
           srcSet="https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c78fb0c49f41a64f34d79a_hero-tesla-p-500.webp 500w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c78fb0c49f41a64f34d79a_hero-tesla-p-800.webp 800w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c78fb0c49f41a64f34d79a_hero-tesla-p-1080.webp 1080w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c78fb0c49f41a64f34d79a_hero-tesla-p-1600.webp 1600w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c78fb0c49f41a64f34d79a_hero-tesla-p-2000.webp 2000w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c78fb0c49f41a64f34d79a_hero-tesla-p-2600.webp 2600w, https://assets-global.website-files.com/62d52b6d074c2e318f479724/64c78fb0c49f41a64f34d79a_hero-tesla.webp 3619w"
           className="mobile-tesla"
-        />
+        /> */}
       </div>
     },
     {
