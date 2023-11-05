@@ -181,7 +181,7 @@ export default function Hero() {
     },
     {
         id:2,
-        content:  <div className="hero_item" style={{ opacity: 1 }}>
+        content:  <div className="hero_item is--1 active" style={{ opacity: 1 }}>
         <div className="hero-visual-top">
           <div
             id="w-node-c77e899e-c707-4595-841f-a516ce2bef50-f148ae1e"
@@ -339,7 +339,7 @@ export default function Hero() {
     },
     {
         id:3,
-        content: <div className="hero_item" style={{ opacity: 1 }}>
+        content: <div className="hero_item is--1 active" style={{ opacity: 1 }}>
         <div className="hero-visual-top">
           <div
             id="w-node-b558ac4a-b15d-75eb-eeb0-55f8eeddf16b-f148ae1e"
@@ -479,7 +479,7 @@ export default function Hero() {
     },
     {
         id:4,
-        content:  <div className="hero_item" style={{ opacity: 1 }}>
+        content:  <div className="hero_item is--1 active" style={{ opacity: 1 }}>
         <div className="hero-visual-top">
           <div
             id="w-node-c20467d3-41e8-be18-5d2a-b11dae4d37c2-f148ae1e"

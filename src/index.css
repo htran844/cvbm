@@ -14768,7 +14768,7 @@ ul {
   }
 
   .hero-item-rotate,.hero_item {
-      display: none
+      /* display: none */
   }
 
   .hero_item.is--1 {
