@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Aos from "aos";
 import 'aos/dist/aos.css'
 
@@ -8,7 +8,7 @@ export default function Hero() {
   const [isShowMenuUsecase, setShowMenuUsecase] = useState(false);
   const [number, setNumber] = useState(0);
   useEffect(()=>{
-    Aos.init({duration: 1000})
+    Aos.init({duration: 1000, delay: 300})
   },[])
   const listHeroItem = [
     {
@@ -122,9 +122,9 @@ export default function Hero() {
           className="hero-item-rotate"
           style={{
             willChange: "transform",
-            transform:
-              "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(7.3028deg) rotateY(15.9968deg) rotateZ(0deg) skew(0deg, 0deg)",
-            transformStyle: "preserve-3d",
+            // transform:
+            //   "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(7.3028deg) rotateY(15.9968deg) rotateZ(0deg) skew(0deg, 0deg)",
+            // transformStyle: "preserve-3d",
           }}
           data-aos='flip-right'
         >
@@ -282,10 +282,11 @@ export default function Hero() {
           className="hero-item-rotate"
           style={{
             willChange: "transform",
-            transform:
-              "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(7.3028deg) rotateY(15.9968deg) rotateZ(0deg) skew(0deg, 0deg)",
-            transformStyle: "preserve-3d",
+            // transform:
+            //   "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(7.3028deg) rotateY(15.9968deg) rotateZ(0deg) skew(0deg, 0deg)",
+            // transformStyle: "preserve-3d",
           }}
+          data-aos='flip-right'
         >
           <div className="hero-images" />
           <img
@@ -439,10 +440,11 @@ export default function Hero() {
           className="hero-item-rotate"
           style={{
             willChange: "transform",
-            transform:
-              "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(7.3028deg) rotateY(15.9968deg) rotateZ(0deg) skew(0deg, 0deg)",
-            transformStyle: "preserve-3d",
+            // transform:
+            //   "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(7.3028deg) rotateY(15.9968deg) rotateZ(0deg) skew(0deg, 0deg)",
+            // transformStyle: "preserve-3d",
           }}
+          data-aos='flip-right'
         >
           <div className="hero-images" />
           <img
@@ -578,10 +580,11 @@ export default function Hero() {
           className="hero-item-rotate"
           style={{
             willChange: "transform",
-            transform:
-              "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(7.3028deg) rotateY(15.9968deg) rotateZ(0deg) skew(0deg, 0deg)",
-            transformStyle: "preserve-3d",
+            // transform:
+            //   "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(7.3028deg) rotateY(15.9968deg) rotateZ(0deg) skew(0deg, 0deg)",
+            // transformStyle: "preserve-3d",
           }}
+          data-aos='flip-right'
         >
           <div className="hero-images" />
           <img
@@ -633,8 +636,10 @@ export default function Hero() {
       </div>
     },
   ]
+  
   useEffect(()=>{
-    setInterval(() => {
+    const inter = setInterval(() => {
+      console.log("pre", number)
         setNumber(pre=>{
             if (pre == listHeroItem.length -1) {
                 return 0
@@ -642,7 +647,10 @@ export default function Hero() {
                 return pre +1
             }
         })
-    }, 3000);
+    }, 4000);
+    return ()=>{
+      clearInterval(inter)
+    }
   }, [])
   return (
     <div className="section is-hero is-home">
@@ -850,7 +858,7 @@ export default function Hero() {
             </a>
           </div>
           <div className="hero-visual is-home">
-            {listHeroItem[number].content}
+            {listHeroItem[number]?.content}
           </div>
         </div>
         <div
