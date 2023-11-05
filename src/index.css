@@ -14082,6 +14082,9 @@ ul {
 }
 
 @media screen and (min-width: 1440px) {
+  .body{
+    font-size: 14px;
+  }
   .section.dark-purple.decoration-bottom {
       background-image:url(https://assets-global.website-files.com/62d52b6d074c2e318f479724/62dfb79b126d122650912483_decoration-up.svg),linear-gradient(transparent 58%,#f5f5ff 60%);
       background-position: 50% 45%,0 0;
@@ -14132,6 +14135,9 @@ ul {
 @media screen and (min-width: 1920px) {
   .section.pricing {
       padding-bottom:12em
+  }
+  .body {
+    font-size: 16px;
   }
 
   .section.is-testimonials {

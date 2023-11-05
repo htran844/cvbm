@@ -2,133 +2,199 @@ import React from "react";
 import "./signup.css";
 
 export default function Signup() {
-    
   return (
-    <section className="auth-container">
-    <div className="login-layout">
-      <div className="logo adc-logo-content">
-        <img
-          className="adc-logo"
-          src="https://app.adcreative.ai/assets/svg/login/AdCreative-logo.svg"
-        />
-      </div>
-
-      <section className="login-form-wrapper relative">
-        <header className="login-layout--header"></header>
-        <section className="component">
-          <section className="component-content">
-            <div className="content">
-              <div id="templateTarget">
-                <form id="formSignup" method="post" noValidate="novalidate">
-                  
-                  <div className="layout-card dynamic-height">
-                    <div className="layout-card-head">
-                      <h1 id="title">
-                        #1 most used <br /> AI tool for advertising.
-                      </h1>
-                      <h2 id="sub-title">Sign up &amp; Get 10 Free Credits</h2>
-                    </div>
-                    <div className="sc-media-container">
-                      <div className="sc-media-buttons">
-                        <button
-                          className="btn google-login"
-                          type="button"
-                          id="google_login"
-                          onclick="googleLogin()"
-                        >
-                          <div className="media-text">Sign-up with Google</div>
-                          <div className="media-icon">
-                            <img
-                              src="https://app.adcreative.ai/assets/svg/login/google-icon-dark-blue.svg"
-                              alt=""
-                            />
-                          </div>
-                        </button>
-                        <button
-                          className="btn microsoft-login"
-                          type="button"
-                          onclick="microsoftLogin()"
-                        >
-                          <div className="media-text">
-                            Sign-up with Microsoft
-                          </div>
-                          <div className="media-icon">
-                            <img
-                              src="https://app.adcreative.ai/assets/svg/login/microsoft-dark-blue.svg"
-                              alt=""
-                            />
-                          </div>
-                        </button>
-                      </div>
-                      <div className="or-div">or</div>
-                    </div>
-                    <div className="layout-card-body">
-                      <div className="input-control">
-                        <input
-                          placeholder="Full Name"
-                          id="fullName"
-                          autoComplete="name"
-                          required=""
-                          type="text"
-                          data-val="true"
-                          data-val-minlength="The full name cannot be less than 3 characters."
-                          data-val-minlength-min={3}
-                          data-val-required="The Full Name field is required."
-                          name="Input.FullName"
-                          defaultValue=""
-                        />
-                        <span
-                          className="field-validation-valid"
-                          data-valmsg-for="Input.FullName"
-                          data-valmsg-replace="true"
-                        />
-                      </div>
-                      <div className="input-control">
-                        <input
-                          placeholder="Email"
-                          id="email"
-                          autoComplete="email"
-                          onchange="return _checkEmailValidation(this)"
-                          required=""
-                          type="email"
-                          data-val="true"
-                          data-val-email="Invalid e-mail. Use valid emails only"
-                          data-val-required="The Email field is required."
-                          name="Input.Email"
-                          defaultValue=""
-                        />
-                        <span className="email-suggestion" />
-                        <div className="lottie">
-                          <lottie-player
-                            className="lottie--cancel d-none"
-                            src="/assets/lottie/email-cancel.json"
-                            background="transparent"
-                            style={{ width: 50, height: 30 }}
-                          />
-                          <lottie-player
-                            className="lottie--check d-none"
-                            src="/assets/lottie/email-check.json"
-                            background="transparent"
-                            style={{ width: 50, height: 30 }}
-                          />
+    <section className="container auth-container">
+      <div className="login-layout">
+        <div className="logo adc-logo-content">
+          <img
+            className="adc-logo"
+            src="https://app.adcreative.ai/assets/svg/login/AdCreative-logo.svg"
+          />
+        </div>
+        <div className="container-content">
+          <div className="testimonial-group">
+            <div className="testimonial large">
+              <div className="testimonial--header">
+                <div className="logo" style={{ backgroundColor: "#ef492d" }}>
+                  <img
+                    src="https://app.adcreative.ai/assets/svg/login/g2-logo.svg"
+                    className="testimonial--logo"
+                  />
+                </div>
+                <div className="info">
+                  <div className="name">
+                    <span className="testimonial--title">G2</span>
+                    <img
+                      src="https://app.adcreative.ai/assets/svg/login/blue-tick.svg"
+                      alt="blue-tick"
+                      className="verified-tick"
+                    />
+                  </div>
+                </div>
+              </div>
+              <p className="testimonial--body">
+                <span>
+                  Out of more than 100,000 software products on G2,
+                  AdCreative.ai secured the 3rd fastest growing product award in
+                  2023 💪{" "}
+                  <span className="tag"> #TimesSquare #BestSoftware </span>
+                </span>
+              </p>
+              <div className="with-bg">
+                <img src="https://app.adcreative.ai/assets/svg/login/new-york-times.webp" alt="" />
+              </div>
+              <p />
+            </div>
+            <div className="testimonial">
+              <div className="testimonial--header">
+                <div className="logo" style={{ backgroundColor: "#fff" }}>
+                  <img
+                    src="https://app.adcreative.ai/assets/svg/login/google-logo.svg"
+                    className="testimonial--logo"
+                  />
+                </div>
+                <div className="info">
+                  <div className="name">
+                    <span className="testimonial--title">Google Ads</span>
+                    <img
+                      src="https://app.adcreative.ai/assets/svg/login/yellow-tick.svg"
+                      alt=""
+                      className="verified-tick"
+                    />
+                  </div>
+                </div>
+              </div>
+              <p className="testimonial--body">
+                <span>
+                  Were proud to recognise AdCreative.ai as a Premier Partner and
+                  their excellence in digital marketing in five categories:
+                </span>
+                <span>
+                  Brand Awareness, Lead Generation, App Growth, Online Sales,
+                  International Growth and Workplace Excellence.
+                </span>
+              </p>
+            </div>
+          </div>
+          <section className="login-form-wrapper relative">
+            <header className="login-layout--header"></header>
+            <section className="component">
+              <section className="component-content">
+                <div className="content">
+                  <div id="templateTarget">
+                    <form id="formSignup" method="post" noValidate="novalidate">
+                      <div className="layout-card dynamic-height">
+                        <div className="layout-card-head">
+                          <h4 id="title">
+                            #1 most used <br /> AI tool for advertising.
+                          </h4>
+                          <h2 id="sub-title">
+                            Sign up &amp; Get 10 Free Credits
+                          </h2>
                         </div>
-                      </div>
-                      <div className="input-control">
-                        <input
-                          placeholder="Password *"
-                          id="password"
-                          autoComplete="current-password"
-                          required=""
-                          type="password"
-                          data-val="true"
-                          data-val-length="The Password must be at least 4 and at max 30 characters long."
-                          data-val-length-max={30}
-                          data-val-length-min={4}
-                          data-val-required="The Password field is required."
-                          maxLength={30}
-                          name="Input.Password"
-                        />
-                        {/* <div
+                        <div className="sc-media-container">
+                          <div className="sc-media-buttons">
+                            <button
+                              className="btn google-login"
+                              type="button"
+                              id="google_login"
+                              onclick="googleLogin()"
+                            >
+                              <div className="media-text">
+                                Sign-up with Google
+                              </div>
+                              <div className="media-icon">
+                                <img
+                                  src="https://app.adcreative.ai/assets/svg/login/google-icon-dark-blue.svg"
+                                  alt=""
+                                />
+                              </div>
+                            </button>
+                            <button
+                              className="btn microsoft-login"
+                              type="button"
+                              onclick="microsoftLogin()"
+                            >
+                              <div className="media-text">
+                                Sign-up with Microsoft
+                              </div>
+                              <div className="media-icon">
+                                <img
+                                  src="https://app.adcreative.ai/assets/svg/login/microsoft-dark-blue.svg"
+                                  alt=""
+                                />
+                              </div>
+                            </button>
+                          </div>
+                          <div className="or-div">or</div>
+                        </div>
+                        <div className="layout-card-body">
+                          <div className="input-control">
+                            <input
+                              placeholder="Full Name"
+                              id="fullName"
+                              autoComplete="name"
+                              required=""
+                              type="text"
+                              data-val="true"
+                              data-val-minlength="The full name cannot be less than 3 characters."
+                              data-val-minlength-min={3}
+                              data-val-required="The Full Name field is required."
+                              name="Input.FullName"
+                              defaultValue=""
+                            />
+                            <span
+                              className="field-validation-valid"
+                              data-valmsg-for="Input.FullName"
+                              data-valmsg-replace="true"
+                            />
+                          </div>
+                          <div className="input-control">
+                            <input
+                              placeholder="Email"
+                              id="email"
+                              autoComplete="email"
+                              onchange="return _checkEmailValidation(this)"
+                              required=""
+                              type="email"
+                              data-val="true"
+                              data-val-email="Invalid e-mail. Use valid emails only"
+                              data-val-required="The Email field is required."
+                              name="Input.Email"
+                              defaultValue=""
+                            />
+                            <span className="email-suggestion" />
+                            <div className="lottie">
+                              <lottie-player
+                                className="lottie--cancel d-none"
+                                src="/assets/lottie/email-cancel.json"
+                                background="transparent"
+                                style={{ width: 50, height: 30 }}
+                              />
+                              <lottie-player
+                                className="lottie--check d-none"
+                                src="/assets/lottie/email-check.json"
+                                background="transparent"
+                                style={{ width: 50, height: 30 }}
+                              />
+                            </div>
+                          </div>
+                          <div className="input-control">
+                            <input
+                              placeholder="Password *"
+                              id="password"
+                              autoComplete="current-password"
+                              required=""
+                              type="password"
+                              data-val="true"
+                              data-val-length="The Password must be at least 4 and at max 30 characters long."
+                              data-val-length-max={30}
+                              data-val-length-min={4}
+                              data-val-required="The Password field is required."
+                              maxLength={30}
+                              name="Input.Password"
+                            />
+                            {/* <div
                           className="toggle-password"
                           onclick="_togglePassword(this)"
                         >
@@ -162,25 +228,25 @@ export default function Signup() {
                             </g>
                           </svg>
                         </div> */}
-                        <span
-                          className="field-validation-valid"
-                          data-valmsg-for="Input.Password"
-                          data-valmsg-replace="true"
-                        />
+                            <span
+                              className="field-validation-valid"
+                              data-valmsg-for="Input.Password"
+                              data-valmsg-replace="true"
+                            />
+                          </div>
+                          <div className="terms">
+                            By registering you agree to our{" "}
+                            <a
+                              href="https://www.adcreative.ai/terms-and-conditions"
+                              target="_blank"
+                            >
+                              terms of use
+                            </a>
+                            .
+                          </div>
+                        </div>
                       </div>
-                      <div className="terms">
-                        By registering you agree to our{" "}
-                        <a
-                          href="https://www.adcreative.ai/terms-and-conditions"
-                          target="_blank"
-                        >
-                          terms of use
-                        </a>
-                        .
-                      </div>
-                    </div>
-                  </div>
-                  {/* <div className="promo-code--container d-none">
+                      {/* <div className="promo-code--container d-none">
                     <span
                       classname="d-block btn-link cursor-pointer mb-0"
                       id="promoCodeBtn"
@@ -221,60 +287,134 @@ export default function Signup() {
                       </svg>
                     </div>
                   </div> */}
-                  <div className="btn-wrapper">
-                    <button
-                      id="form-button"
-                      disabled=""
-                      className="--data-ps-target submit-btn signup-btn"
-                      data-ps="target"
-                      type="submit"
-                    >
-                      <span>Sign up &amp; Get 10 Free Credits</span>
-                    </button>
+                      <div className="btn-wrapper">
+                        <button
+                          id="form-button"
+                          disabled=""
+                          className="--data-ps-target submit-btn signup-btn"
+                          data-ps="target"
+                          type="submit"
+                        >
+                          <span>Sign up &amp; Get 10 Free Credits</span>
+                        </button>
+                      </div>
+                      <input
+                        name="__RequestVerificationToken"
+                        type="hidden"
+                        defaultValue="CfDJ8D82nD2SabFLlr-sR_zQ7fU038SOw8UylEsE5OUUN0zJZG11E8BhDI8hBb4A7OUm7Lf2Urv6g7yrJADyS-eZSeTjC1AIqOizKpWgiDCcqIDQSDlJ717B8BM9FrwkFmKvSF04GolIWJI78lYTsK-cnAk"
+                      />
+                    </form>
+                    <div className="layout-footer-info">
+                      <p>
+                        <span id="subtitle">Do you have an account?</span>
+                        <span id="subtitleLink">
+                          <a
+                            href="/Identity/Account/Login"
+                            className="auth-link"
+                          >
+                            Login
+                          </a>
+                        </span>
+                      </p>
+                    </div>
                   </div>
-                  <input
-                    name="__RequestVerificationToken"
-                    type="hidden"
-                    defaultValue="CfDJ8D82nD2SabFLlr-sR_zQ7fU038SOw8UylEsE5OUUN0zJZG11E8BhDI8hBb4A7OUm7Lf2Urv6g7yrJADyS-eZSeTjC1AIqOizKpWgiDCcqIDQSDlJ717B8BM9FrwkFmKvSF04GolIWJI78lYTsK-cnAk"
+                </div>
+              </section>
+            </section>
+          </section>
+          <div className="testimonial-group">
+            <div className="testimonial">
+              <div className="testimonial--header">
+                <div className="logo" style={{ backgroundColor: "#FF5927" }}>
+                  <img
+                    src="https://app.adcreative.ai/assets/svg/login/semrush-logo.svg"
+                    className="testimonial--logo"
                   />
-                </form>
-                <div className="layout-footer-info">
-                  <p>
-                    <span id="subtitle">Do you have an account?</span>
-                    <span id="subtitleLink">
-                      <a href="/Identity/Account/Login" className="auth-link">
-                        Login
-                      </a>
-                    </span>
-                  </p>
+                </div>
+                <div className="info">
+                  <div className="name">
+                    <span className="testimonial--title">Semrush</span>
+                    <img
+                      src="https://app.adcreative.ai/assets/svg/login/yellow-tick.svg"
+                      alt=""
+                      className="verified-tick"
+                    />
+                  </div>
                 </div>
               </div>
+              <p className="testimonial--body">
+                <span>
+                  AdCreative.ai ranks as the #1 tool on our list of AI Tools for
+                  Digital Marketers in 2023. However,
+                </span>
+                <span>
+                  AdCreative.ai is more than just an AI company; they have one
+                  of the largest high-conversion ad creative databases.
+                </span>
+              </p>
             </div>
-          </section>
-        </section>
-      </section>
-
-      <div className="g2-testimonial">
-        <div className="left">
-          <img
-            className="g2-logo"
-            src="https://app.adcreative.ai/assets/svg/login/g2-dark-blue.svg"
-            alt=""
-          />
-          <div className="testimonial-score">
-            <div className="stars">
-              <img src="https://app.adcreative.ai/assets/svg/login/full-star.svg" alt="Star" />
-              <img src="https://app.adcreative.ai/assets/svg/login/full-star.svg" alt="Star" />
-              <img src="https://app.adcreative.ai/assets/svg/login/full-star.svg" alt="Star" />
-              <img src="https://app.adcreative.ai/assets/svg/login/full-star.svg" alt="Star" />
-              <img src="https://app.adcreative.ai/assets/svg/login/half-star.svg" alt="Star" />
+            <div className="testimonial large">
+              <div className="testimonial--header">
+                <div className="logo" style={{ backgroundColor: "#e60000" }}>
+                  <img
+                    src="https://app.adcreative.ai/assets/svg/login/havas-logo.svg"
+                    className="testimonial--logo"
+                  />
+                </div>
+                <div className="info">
+                  <span className="testimonial--title">Havas</span>
+                </div>
+              </div>
+              <p className="testimonial--body">
+                <span>
+                  As an innovative startup in media and creativity,
+                  AdCreative.ai is supported by the Havas Accelerator Program
+                  with the mission to connect startups, agencies and brands to
+                  pave the future of communication and advertising.
+                </span>
+                <span className="tag">
+                  #havasstartupaccelerator #adcreative #paris
+                </span>
+              </p>
             </div>
-            <span className="g2-testimonial--comment">497 comment</span>
           </div>
         </div>
-        <div className="right">4,5</div>
+        <div className="g2-testimonial">
+          <div className="left">
+            <img
+              className="g2-logo"
+              src="https://app.adcreative.ai/assets/svg/login/g2-dark-blue.svg"
+              alt=""
+            />
+            <div className="testimonial-score">
+              <div className="stars">
+                <img
+                  src="https://app.adcreative.ai/assets/svg/login/full-star.svg"
+                  alt="Star"
+                />
+                <img
+                  src="https://app.adcreative.ai/assets/svg/login/full-star.svg"
+                  alt="Star"
+                />
+                <img
+                  src="https://app.adcreative.ai/assets/svg/login/full-star.svg"
+                  alt="Star"
+                />
+                <img
+                  src="https://app.adcreative.ai/assets/svg/login/full-star.svg"
+                  alt="Star"
+                />
+                <img
+                  src="https://app.adcreative.ai/assets/svg/login/half-star.svg"
+                  alt="Star"
+                />
+              </div>
+              <span className="g2-testimonial--comment">497 comment</span>
+            </div>
+          </div>
+          <div className="right">4,5</div>
+        </div>
       </div>
-    </div>
     </section>
   );
 }
