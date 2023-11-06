@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./signup.css";
+import Aos from "aos";
+import 'aos/dist/aos.css'
 
 export default function Signup() {
+  useEffect(()=>{
+    Aos.init({duration: 1000})
+  },[])
   return (
     <section className="container auth-container">
       <div className="login-layout">
@@ -13,7 +18,7 @@ export default function Signup() {
         </div>
         <div className="container-content">
           <div className="testimonial-group">
-            <div className="testimonial large">
+            <div className="testimonial large" data-aos="fade-right">
               <div className="testimonial--header">
                 <div className="logo" style={{ backgroundColor: "#ef492d" }}>
                   <img
@@ -45,7 +50,7 @@ export default function Signup() {
               </div>
               <p />
             </div>
-            <div className="testimonial">
+            <div className="testimonial" data-aos="fade-right">
               <div className="testimonial--header">
                 <div className="logo" style={{ backgroundColor: "#fff" }}>
                   <img
@@ -323,7 +328,7 @@ export default function Signup() {
             </section>
           </section>
           <div className="testimonial-group">
-            <div className="testimonial">
+            <div className="testimonial" data-aos="fade-left">
               <div className="testimonial--header">
                 <div className="logo" style={{ backgroundColor: "#FF5927" }}>
                   <img
@@ -353,7 +358,7 @@ export default function Signup() {
                 </span>
               </p>
             </div>
-            <div className="testimonial large">
+            <div className="testimonial large" data-aos="fade-left">
               <div className="testimonial--header">
                 <div className="logo" style={{ backgroundColor: "#e60000" }}>
                   <img
